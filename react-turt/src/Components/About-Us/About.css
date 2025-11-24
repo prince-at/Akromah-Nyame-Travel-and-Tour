@@ -1,6 +1,6 @@
-.who-are-we {
+/* ===== BASE (Desktop / Default) ===== */
+.who-are-we { 
   width: 100%;
-
   display: flex;
   margin-top: 200px;
   flex-direction: row;
@@ -8,14 +8,17 @@
   align-items: center;
   padding-left: 70px;
 }
+ 
 .imag-can {
   width: 30%;
   display: flex;
   margin-left: 70px;
 }
+
 .globe {
   width: 67%;
 }
+
 .vision-background {
   width: 50%;
   height: 100vh;
@@ -25,49 +28,38 @@
   justify-content: center;
   padding: 30px;
 }
+
 .vision-statement {
   font-size: 45px;
   font-weight: bold;
   font-family: "Helvetica-Bold";
 }
-.vision-statement-button {
-  justify-content: start;
-  width: 50%;
-  background-color: rgb(218, 2, 110);
-  padding-left: 35px;
-  padding-right: 35px;
-  color: white;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border-color: rgb(255, 255, 255);
-  border-width: 2px;
-  margin-top: 20px;
-  border-radius: 50px;
-}
-.vision-statement-button:hover {
-  background-color: rgb(199, 8, 103);
-  color: rgb(255, 255, 255);
-  border-color: rgb(199, 8, 103);
-}
+
+.vision-statement-button,
 .packages-button {
   justify-content: start;
   width: 50%;
-  background-color: rgb(218, 2, 110);
-  padding-left: 35px;
-  padding-right: 35px;
+  background-color: rgb(83, 36, 59);
+  padding: 15px 35px;
   color: white;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border-color: rgb(255, 255, 255);
-  border-width: 2px;
+  border: 2px solid #fff;
   margin-top: 20px;
   border-radius: 50px;
+  transition: letter-spacing 0.3s ease, background-color 0.3s;
+} 
+
+.vision-statement-button:hover {
+  background-color: #b43f4d;
+  cursor: pointer;
+  letter-spacing: 2px;
 }
+
 .packages-button:hover {
   background-color: rgb(199, 8, 103);
-  color: rgb(255, 255, 255);
-  border-color: rgb(199, 8, 103);
+  cursor: pointer;
+  letter-spacing: 2px;
 }
+
 .staffs-container {
   width: 100%;
   background-color: #d1ffbe6c;
@@ -79,68 +71,231 @@
   width: 100%;
   display: flex;
 }
+
 .staffs-image-container {
-  margin-top: 70px;
-  margin-bottom: 70px;
-}
-
-/* ...existing code... */
-
-.staffs-image {
-  width: 100%;
-}
-
-.travel-man {
-  width: 260px;
-  height: 189px;
-  border-radius: 30px;
-  margin-bottom: 30px;
-}
-.travel-man-1 {
-  width: 260px;
-  height: 304px;
-  border-radius: 30px;
-}
-.travel-man-2 {
-  width: 260px;
-  height: 304px;
-  border-radius: 30px;
-}
-.travel-man-3 {
-  margin-top: 30px;
-  width: 260px;
-  height: 189px;
-  border-radius: 30px;
-}
-.staffs-image-container {
+  margin: 70px 0;
   width: 100%;
   display: flex;
   flex-direction: row;
+ 
 }
+
+
+
+
 .staffs-title {
   line-height: 1.1;
   font-size: 3rem;
   font-weight: bold;
   font-family: "Helvetica-Bold";
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0;
   color: black;
 }
-.for-only-images {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-}
+
+
+
 .staff-div {
   width: 50%;
   display: flex;
   flex-direction: column;
   padding-right: 20px;
   margin-top: -50px;
+  margin-left: 40px
 }
+
 .staffs-text {
   padding-right: 40px;
 }
+
 .staffs-goals {
   margin-top: 10px;
 }
+
+
+/*tablet view */
+@media screen and (max-width:1024px){
+  .for-only-images{
+    width: 100%;
+  }
+ .staffs-text{
+  width: 90%;
+  
+  padding-left:25px
+
+ }
+ .vision-background{
+  margin-top: 50px;
+ }
+ .staffs-title{
+  margin-right: 30px;
+ }
+ .staffs-goals{
+  width: 89%;
+ }
+ .packages-button{
+  margin-right: 50px;
+ }
+
+}
+/* ====== TABLET VIEW (<= 992px) ====== */
+@media screen and (max-width: 992px) {
+  .who-are-we {
+    flex-direction: column;
+    padding-left: 20px;
+    margin-top: 150px;
+  }
+
+  .vision-background {
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .vision-statement {
+    font-size: 2rem;
+
+  }
+
+  .vision-statement-button,
+  .packages-button {
+    width: 70%;
+    align-self: center;
+  }
+
+  .imag-can {
+    width: 60%;
+    margin: 20px auto;
+    justify-content: center;
+  }
+
+  .globe {
+    width: 100%;
+  }
+
+  .staffs-image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .for-only-images {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .staff-div {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+  }
+
+
+  .travel-man,
+  .travel-man-1,
+  .travel-man-2,
+  .travel-man-3 {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+/* ====== MOBILE VIEW (<= 600px) ====== */
+@media (max-width: 600px) {
+  .who-are-we {
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 0 15px;
+  }
+  .for-only-images {
+  width: 90% !important;
+  display: flex;
+  flex-direction: row;
+}
+
+
+  .vision-background {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .vision-statement {
+    font-size: 1.6rem;
+  }
+
+  .vision-statement-button,
+  .packages-button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .imag-can {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .globe {
+    width: 100%;
+  }
+ 
+  .staffs-container {
+    padding-left: 0;
+  }
+
+  .staffs-title {
+    font-size: 1.8rem;
+  }
+
+  .staff-div {
+    width: 95%;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .travel-man,
+  .travel-man-1,
+  .travel-man-2,
+  .travel-man-3 {
+    width: 95%;
+    height: auto;
+  }
+}
+
+.for-only-images {
+
+  display: flex;
+  flex-direction: row;
+}
+
+.travel-man {
+  width: 260px;
+  height: 289px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  object-fit: cover;
+}
+.travel-man-1 {
+  width: 260px;
+  height: 304px;
+  border-radius: 30px;
+  margin-right: 5px;
+  object-fit: cover;
+}
+.travel-man-2 {
+  width: 260px;
+  height: 304px;
+  border-radius: 30px;
+  margin-left: 5px;
+  object-fit: cover;
+}
+.travel-man-3 {
+  margin-top: 10px;
+  width: 260px;
+  height: 280px;
+  border-radius: 30px;
+  margin-left: 5px;
+  object-fit: cover;
+} 

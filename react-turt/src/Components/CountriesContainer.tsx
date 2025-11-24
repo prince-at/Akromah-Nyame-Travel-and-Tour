@@ -1,8 +1,8 @@
 import { WorkingListContainer } from './scene/WorkList';
 
-type Props = {};
 
-const CountriesContainer = (props: Props) => {
+
+const CountriesContainer = () => {
   const items = WorkingListContainer;
 
   return (

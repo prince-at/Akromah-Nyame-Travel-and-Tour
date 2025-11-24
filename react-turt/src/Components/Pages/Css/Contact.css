@@ -1,8 +1,7 @@
 .contacts{
     width: 100%;
     height: 70vh;
-    display: flex;
-    
+    display: flex;  
     align-items: end;
     background-color: black
 }
@@ -13,6 +12,36 @@
    opacity: 0.5;
     object-fit: cover;
 }
+
+
+.contact-title-background{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgb(241, 236, 236);
+}
+.contact-line-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tel{
+    padding: 15px;
+    font-size: 16px;
+    
+}
+.whatsapp-icon{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.contact-lines{
+    font-size: 18px;
+}
+
 .contact-header{
     font-size: 2rem;
     color: white;
@@ -20,21 +49,187 @@
     padding: 50px;
     font-weight: bold;
 }
-.get-in-touch{
+.contact-main-container{
     width:100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
     
 }
 .phone-numbers{
     width: 50%;
     align-content: center;
     justify-content: center;
-    text-align: center;
-    
-   
-    
+    text-align: center; 
 }
 .tel{
-    font-size: 20px;
+    font-size: 18px;
+    
+}
+.tel:hover{
+    color: rgb(36, 187, 16);
+    text-decoration: underline;
+   
+}
+.contact-line-container{
+    margin-bottom: 15px;
+    
+}
+
+@media screen and (max-width: 768px){
+    .contact-main-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.phone-numbers{
+    width: 90%;
+    margin-top: 40px;
+    align-content: center;
+    justify-content: center;
+    text-align: center; 
+}
+.contact-lines{
+    font-size: 18px;
+    padding: 10px;
+    width: 50%;
+    
+}
+.contact-title-background{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgb(238, 233, 233);
+}
+.contact-line-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tel{
+    padding: 15px;
+    font-size: 16px;
+    
+}
+.whatsapp-icon{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+}
+
+@media screen and (max-width: 1024px){
+ .contact-main-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.phone-numbers{
+    width: 90%;
+    margin-top: 40px;
+    align-content: center;
+    justify-content: center;
+    text-align: center; 
+}
+.contact-lines{
+    font-size: 18px;
+    padding: 10px;
+    width: 50%;
+    
+}
+.contact-title-background{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgb(238, 233, 233);
+}
+.contact-line-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tel{
+    padding: 15px;
+    font-size: 16px;
+    
+}
+.whatsapp-icon{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+}
+@media screen and (max-width: 480px){
+ .contact-main-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.phone-numbers{
+    width: 90%;
+    margin-top: 40px;
+    align-content: center;
+    justify-content: center;
+    text-align: center; 
+}
+.contact-lines{
+    font-size: 18px;
+    padding: 10px;
+    width: 50%;
+    
+}
+.contact-title-background{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgb(238, 233, 233);
+}
+.contact-line-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tel{
+    padding: 15px;
+    font-size: 16px;
+    
+}
+.whatsapp-icon{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+}
+
+a:link{
+    color: rgb(0, 0, 0);
+}
+
+a:link{
+  text-decoration: none;
+}
+a:active{
+  text-decoration: underline;
+}
+
+
+a:link{
+  text-decoration: none;
+}
+a:active{
+  text-decoration: underline;
 }

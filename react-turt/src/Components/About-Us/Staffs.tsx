@@ -1,12 +1,13 @@
-import React from 'react'
+
 import './About.css'
-import travel1 from '../../images/about-us11.jpg'
+import travel1 from '../../images/WhatsApp Image 2025-06-29 at 3.08.04 PM.jpeg'
 import travel2 from '../../images/about-us12.jpg'
 import travel3 from '../../images/about-us13.jpg'
 import travel4 from '../../images/about-us14.jpg'
-type Props = {}
 
-const Staffs = (props: Props) => {
+
+
+const Staffs = () => {
   return (
     <div className='staff-background'>
     <div className='staffs-container'>
@@ -23,19 +24,24 @@ const Staffs = (props: Props) => {
          </div>
             <div className='staff-div'>
                 <h1 className='staffs-title'>We Make Travel Accessible and Enjoyable.</h1>
-                <p className='staffs-text'>Our Vision is to be a trusted travel and tour recruitment agency, connecting
-talented professionals with exciting job opportunities worldwide,
-while fostering a culture of innovation, excellence, and customer satisfaction.</p>
-<br/>           <div className='staffs-goals'>
-                <h1>Our goals: </h1>
+                
+                <p className='staffs-text'>
+                    <h1 className=''>Our Vision</h1>
+                    Our Vision is to be a trusted travel and tour recruitment agency, connecting
+                    talented professionals with exciting job opportunities worldwide,
+                    while fostering a culture of innovation, excellence, and customer satisfaction.</p>
+                <br/>           
+                <div className='staffs-goals'>
+                <h1>Our Goals: </h1>
                 <ul>
                     <li>"Expand global reach: Establishing partnerships with international clients and candidates.</li>
                     <li>Foster long-term relationships:Building strong connections with clients and candidates, ensuring repeat business and referrals.</li>
                     <li>Stay up-to-date with industry trends: Continuously monitoring industry developments and adapting services to meet evolving needs.</li>
                 </ul>
                 </div>
-                <button className='packages-button'>Find packages</button>
                 
+                <button className='packages-button' onClick={() => (window.location.href = '/services')} >Find packages</button>
+
             </div>
         </div>
     </div>

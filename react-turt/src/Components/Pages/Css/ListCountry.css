@@ -1,6 +1,6 @@
 .list-country-container{
     width: 100%;
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -12,39 +12,57 @@
     
     
 }
-.country-list{
+.working-department{
     display: flex;
     flex-direction: row;
+    width: 90%;
+    height: 620px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.swiper-desktop-view{
     width: 100%;
-    height: 480px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .heart-icon{
-    width: 35px;
-    height: 35px;
-    background-color: white;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(223, 93, 121);
     display: flex;
-    position: absolute;
-    top: 5%;
-    left: 80%;
+    position: relative;
+    /* top: 5%;
+    left: 80%; */
     border-radius: 150px;
+    justify-content: center;
 
     align-items: center;
     /* position: absolute; */
 
 }
+.span-icon-column{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
 .country-item{
     width: 100%;
-    height: 500px;
+    height: 520px;
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
-    margin-left: 10px;
-     border-width: 2px;
-     border-color: rgb(231, 229, 229);
-     background-color: white;
-     margin-top: 150px;
+    
+    margin-left: 25px;
+    margin-right: 25px;
+     border-width: 1px;
+     border-color: rgb(0, 0, 0);
+       background-color: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+     margin-top: 100px;
       /* ...existing styles... */
   animation: slideInLeft 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -63,9 +81,9 @@
 
 .country-images{
     height: 300px;
+    width: 100%;
     display: flex;
-    border-radius: 16px;
-    padding: 8px;
+    
     object-fit: cover;
 
 }
@@ -73,19 +91,23 @@
     width: 300px;
     height: 300px;
     position: relative;
+      background-color: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  
 }
 .span-text{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    padding: 10px;
-    justify-content: center;
+    flex-direction: row;
+    height: 200px;
+  
     
 }
 .work-country{
     font-weight: bold;
     color: rgb(43, 41, 41);
-    font-size: 1.1rem;
-    font-family: "Trip Sans VF", "Trip Sans", arial, sans-serif;
+    font-size: 1.5rem;
+    
     cursor: pointer
 }
  
@@ -95,31 +117,110 @@
     font-weight: bold;
     animation: ease-in-out 0.3s;
 }
+/* ...existing code... */
 .country-button{
     width: 100%;
-    background-color: #ce5263;
+    height: 44px;
+    background-color: rgb(0, 0, 0);
     color: white;
     border: none;
-    border-radius: 50px;
-    border-width: 15px;
-    border-color: rgb(248, 142, 142);
-    padding: 12px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-     transition: letter-spacing 0.3s ease, background-color 0.3s;
-    letter-spacing: normal;
+    border-top-width: 1px;
+    border-color: #000000;
+    /* smooth fade + subtle lift on hover */
+    transition: background-color 300ms ease, color 300ms ease, transform 220ms cubic-bezier(.2,.9,.3,1), box-shadow 300ms ease, opacity 300ms ease;
+    will-change: transform, opacity;
+    opacity: 1;
 }
 
-.country-button:hover{
-    background-color: #b03e4d;
-    letter-spacing: 2px;
+.country-button .country-button-text {
+    /* ensure inner text follows parent color transition */
+    color: inherit;
+    transition: inherit;
+    border-top-width: 1px;
+    border-color: #000000;
+     width: 100%;
 }
+
+/* hover state: fading effect + subtle elevation */
+.country-button:hover{
+    
+    background-color: #ffffff;
+    color: #000000;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    opacity: 0.98;
+   
+}
+.span-text-row{
+    display: flex;
+    flex-direction: row;
+}
+.span-icon-column{
+    width: 25%;
+    height: 100%;
+    border-right-width: 1px;
+    border-color: #000000;
+}
+.span-text-column-only-2{
+    display: flex;
+    flex-direction: column;
+    
+}
+.span-text-column-row{
+    padding: 10px;
+
+}
+.like-icon{
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.star-rating {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+  align-items: center;
+}
+
+.star {
+  font-size: 1rem;
+  transition: color 200ms ease;
+  size: 20px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.star.empty {
+  color: #e0e0e0;
+}
+/* .span-title-text{
+    margin-top: -10px;
+} */
+
+/* optional active state for tactile feedback */
+.country-button:active{
+    transform: translateY(-2px) scale(0.998);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+    border-top-width: 1px;
+    border-color: #000000;
+}
+/* ...existing code... */
 .process-duration{
-    font-weight: bold;
+    font-weight: 300;
     color: rgb(87, 83, 83);
     padding-bottom: 10px;
     padding-top: 10px;
+    cursor: pointer;
+}
+.process-duration:hover{
+    color: rgb(50, 199, 37);
 }
 .opportunity{
     font-size:2.5rem;
@@ -133,17 +234,37 @@
 .see-more-button{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    margin-top: 15px;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    
    
 }
-.see-more-button:hover{
+.see-more-button-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     cursor: pointer;
-    color: #ce5263;
-     transition: background-color 0.3s ease;
+}
+.view-more-works{
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
      transition: 0.3s ease, background-color 0.3s;
-    letter-spacing: 2px;
+    letter-spacing: normal;
+    font-size: 10px;
+}
+.view-more-works:hover{
+    color: #ce5263;
+     
+}
+.arrow-icon:hover{
+    cursor: pointer;
+     color: #ce5263;
+
 }
 .arrow-icon{
     font-size: 1.5rem;
@@ -155,4 +276,263 @@
      transition: background-color 0.3s ease;
      transition: 0.3s ease, background-color 0.3s;
     letter-spacing: 2px;
+}
+
+
+
+/* Add these media queries at the end of the file */
+/* Responsive styles for tablets */
+@media screen and (max-width: 1024px) {
+    
+    .swiper-desktop-view{
+        height: 100%;
+    }
+    .list-country-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+.country-images{
+    object-fit: cover;
+    height: 60px;
+}
+    .country-item {
+        margin-top: 20px;
+        margin-left: 0;
+        width: 45%;
+       
+    }
+   .working-department{
+    height: 100%;
+   }
+
+    .container-for-image {
+        width: 100%;
+        height: 360px;
+    }
+
+    .opportunity {
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+    .span-text{
+        height: 100%;
+        margin-top: 200px;
+    }
+    .span-text-column-only-2{
+        position: relative;
+      
+    }
+    .country-button-text{
+        height: 35px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .country1 {
+        width: 95%;
+        margin-top: 100px;
+    }
+ 
+
+    /* .list-country-container{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+ 
+    } */
+    
+    .country-item {
+        width: 100%; 
+        margin-right: 10px;
+
+    }
+    /* .span-text{
+        margin-top: 200px;
+    } */
+
+    .heart-icon {
+       
+        width: 30px;
+        height: 30px;
+    }
+
+    .like-icon{
+         width: 20px;
+        height: 20px;
+    }
+
+    .country-images {
+        height: 75vh;
+        object-fit: cover;
+    }
+
+    .opportunity {
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+
+    .work-country {
+        font-size: 1rem;
+    }
+
+    .process-duration {
+        font-size: 0.9rem;
+    }
+
+   
+}
+/* Responsive styles for small tablets */
+@media screen and (max-width: 768px) {
+    .country1 {
+        width: 95%;
+        margin-top: 210px;
+    }
+    .working-department{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .swiper-desktop-view{
+        display: flex;
+        flex-direction: column;
+    }
+ 
+    .list-country-container{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+ 
+    }
+    
+    .country-item {
+        width: 95%;
+       display: flex;
+       flex-direction: column;
+        min-height: 500px;
+
+    }
+  
+
+    .heart-icon {
+        left: 2%;
+       
+    }
+    .like-icon{
+        width: 20px;
+        height: 30px;
+      
+    }
+
+    .country-images {
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .opportunity {
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+
+    .work-country {
+        font-size: 1rem;
+    }
+
+    .process-duration {
+        font-size: 0.9rem;
+    }
+    .swiper-desktop-view{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+ 
+}
+
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 480px) {
+    .country1 {
+        width: 100%;
+         height: 100%
+    }
+    .list-country-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    
+    .heart-icon {
+        width: 30px; 
+        height: 30px;
+        top: 3%;
+        left: 2%
+    }
+    
+  
+
+    .country-images {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .opportunity {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
+    .country-button {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+
+    .see-more-button {
+        font-size: 0.9rem;
+    }
+
+    .arrow-icon {
+        font-size: 1.2rem;
+    }
+    .working-department{
+        width: 100%;
+        height: 100% !important;
+       
+      
+        display: flex;
+        flex-direction: column;
+    }
+    .swiper-desktop-view{
+        height: 100%;
+        
+        display: flex;
+        flex-direction: column;
+    }
+    .country-item{
+        width: 85% !important;
+        height: 100px;
+    }
+
+    .container-for-image{
+        width: 100% !important
+    }
+    .country-item{
+    width: 100%;
+    height: 543px;
+    }
+    .span-icon-column{
+        width: 150px;
+    }
+       .span-text{
+        position: relative;
+        height: 100%;
+        margin-top: 50px
+    }
 }

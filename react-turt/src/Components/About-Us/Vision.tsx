@@ -1,14 +1,11 @@
-import React from "react";
+
 import "../Pages/Vision.css";
-import vietnam from "../../assets/WhatsApp Image 2025-04-24 at 11.08.12 PM.jpeg";
+
 import { TrendingData } from "../TrendingData";
 
-
-type Props = {};
-
-const Vision = (props: Props) => {
+const Vision = () => { 
   return (
-    <div className="vision-background-3">
+    <div className="vision-background-3"> 
       <div className="image-for-visit">
         <h1 className="do-wanna-miss">Destinations You Don’t Wanna Miss</h1>
       </div>

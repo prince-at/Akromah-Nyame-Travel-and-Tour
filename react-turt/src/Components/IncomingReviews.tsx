@@ -5,10 +5,15 @@ import instagram from '../images/tripadvisorlogo1-free-img1.png'
 import google from '../images/google-reviews-free-img.png'
 import facebook from '../images/fb-free-imng.png'
 import tiktok from '../images/tripadvisorlogo1-free-img2.png'
-import Slider from "react-slick";
+ 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useEffect, useRef, useState } from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/bundle";
+import "swiper/css/autoplay"; 
+
 const reviews = [
   {
     pic: 'S',
@@ -46,18 +51,33 @@ const IncomingReviews = () => {
 
   return (
     <>
+ 
+
+  <div className='swiper-incoming-review' style={{ height: "100%",width: "90%", margin: "100px", justifyContent: "center", alignItems: "center", paddingTop: '50px' }}>
+      <div style={{justifyContent:'center', alignItems:'center'}}>
+    <h1 className='Incoming'>Incoming Reviews</h1></div>
+    <Swiper 
+         modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={20}
+        slidesPerView={1}
+        navigation={false}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 8000 }}
+        loop={true} 
+        style={{height:'90%'}}
+    >
     <div className='portfolio-container'>
-    <h1 className='Incoming'>Incoming Reviews</h1>
+
     <div className='incomingReviews-container'>
 
         <div className='incoming-reviews'>
            
             {reviews.map((review, index) => {
                 return (
-                    
+                    <SwiperSlide style={{width: '100%', justifyContent: 'center', alignItems: 'center'}}>
                     <div key={index} className='incoming-review-card'>
                         <div className='incoming-person-review'>
-                            <div className='letter-T'> {review.pic}</div>
+                            <div className='letter-T'>{review.pic}</div>
                         </div>
                         
                         <p className="incoming-review-text">"{review.review}"</p>
@@ -68,6 +88,7 @@ const IncomingReviews = () => {
                         
                         
                     </div>
+                    </SwiperSlide>
                 );
             })}
             
@@ -91,6 +112,8 @@ const IncomingReviews = () => {
     </div>
       
     
+    </div>
+    </Swiper>
     </div>
      <div className='social-media-logos'>
             <img src={yelp} alt='yelp' className='yelp-logo' />

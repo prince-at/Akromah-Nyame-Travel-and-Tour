@@ -1,14 +1,13 @@
-import { useNavigate } from "react-router-dom";
-import BlogPicture from "../../assets/Quyen-B.jpg";
+
 import WorkAbroadPicture from "../../assets/h6-Does-Travel-Insurance-Cover-Working-Abroad.jpg"
 import { BlogList } from "../BlogData";
 import MarqueeText2 from "../MarqueeText2";
 import "./Css/WorkAbroad.css"
 import workOutside from "../../assets/cover-rise-in-employees-working-abroad.jpg"
-type Props = {}
 
-const WorkAbroadBlog = (props: Props) => {
-  const navigate = useNavigate();
+const WorkAbroadBlog = () => { 
+
+  
   return (
     <div className="cover-for-blog">
     <div className="blog-page">
@@ -18,18 +17,20 @@ const WorkAbroadBlog = (props: Props) => {
       className="Blog-picture"
     />
     <div>
-      <h1 className="blog-title">  Why Working Abroad Could Be the Best <br/>Decision You Ever Make </h1>
+      <div  className="blog-title-container">
+      <h1 className="blog-title-for-topic">  Why Working Abroad Could Be the Best <br/>Decision You Ever Make </h1>
+      </div>
       {BlogList.map((blog)=>{
         return(
           <div>
-            <p className="blog-date">{blog.blogDate1} </p>
+            <p className="date-for-blogs">{blog.blogDate1} </p>
           </div>
         )})}
     </div>
-    
+     <MarqueeText2/>
   </div>
   <div>
-      <MarqueeText2/>
+     
     </div>
   <div className="work-abroad-container">
     <div className="work-abroad-content">
@@ -62,7 +63,7 @@ const WorkAbroadBlog = (props: Props) => {
     <h1 className="global-text">Conclusion</h1>
     <h1 className="work-abroad-title">Ready to start your work abroad journey? Explore current opportunities, visa tips, and destination guides in our Work Abroad Resources section.</h1>
     <h1 className="work-abroad-title">Would you like me to tailor this blog post to a specific country, industry (e.g. healthcare, tech), or audience (e.g. students, skilled workers)?</h1>
-    <button className="wbtn-get" onClick={()=>navigate('/contact')}>Get in Touch with Us </button>
+    <button className="wbtn-get" onClick={() => window.location.href = '/contact'}>Get in Touch with Us </button>
     <hr/>
     
     </div>

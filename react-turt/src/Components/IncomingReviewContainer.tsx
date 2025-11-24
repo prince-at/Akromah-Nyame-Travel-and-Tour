@@ -5,7 +5,9 @@ const IncomingReviewContainer = () => {
   return (
     <div className='IncomingPage'>
         <IncomingReviews />
-    </div>
+        
+    </div> 
+    
   )
 }
 

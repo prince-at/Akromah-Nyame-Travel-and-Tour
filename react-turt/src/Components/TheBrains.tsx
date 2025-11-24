@@ -6,8 +6,10 @@ import flight from '../../src/images/Blue_and_White_Minimalist_Flight_Ticket_Ins
 
 
 
-const TheBrains = () => {
-  return (
+
+const TheBrains = () => { 
+
+  return ( 
     
     <div className="vision-background-1">
       <div className="image-for-visit">
@@ -33,12 +35,12 @@ const TheBrains = () => {
         <div className='start-co'>
             <h1 className='ready-to-start'> Ready to start your Adventure?</h1>
             <p className='lets-create'>Let us help you create the perfect journey. Our travel experts are ready to craft your dream vacation.				</p>
-            <button className='planning'>Start Planning
+            <button className='planning' onClick={() => (window.location.href = '/work-description')}>Start Planning
                 <FaArrowAltCircleRight className='arrow-circle'/>
             </button>
         </div>
         <img src={flight} alt='flight' className='flight'/>
-        <img src={image12} alt='image12' className='image12'/>
+        <img src={image12} alt='image12' className='image12'/> 
       </div>
       </div>
      

@@ -2,9 +2,9 @@ import {useEffect, useState} from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai' // Replace 'some-icon-library' with the actual library name
 import { SliderData } from './SliderData';
 
-type Props = {}
 
-const Slider = (props: Props) => {
+
+const Slider = () => {
     const [currentIndex, setCurrentSlide] = useState(0);
     const sliderLength = SliderData.length;
     const autoScroll = true;
@@ -32,7 +32,7 @@ const Slider = (props: Props) => {
         
     },[currentIndex]);
 
-  return (
+  return ( 
     <div >
         <div className='empty-cont'></div>
     <div className='slider-container'>

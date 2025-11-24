@@ -1,13 +1,14 @@
 import "././Pages/Css/WorkDescription.css"
 import desc from "../assets/School-Africa-USA-Visa-Application-Guides.jpg"
-type Props = {}
 
-const WorkDescription = (props: Props) => {
+
+const WorkDescription = () => {
+    
   return (
-    <div> 
-        <div>
-            
-            <div className="desc-im">
+    <div className="work-description-full-page"> 
+        <div  className="work-description-full-page">
+             
+            <div className="desc-im"> 
                 <img src={desc} alt="Work Description" className="im-for-desc"/>
                 <h1 className="work-description-title">WORK TYPE</h1>
                 <p className="hiring">We are recruiting workers for the following hospitality positions to countries
@@ -17,7 +18,7 @@ const WorkDescription = (props: Props) => {
                 <div className="line">
                     <h1 className="list-head">HOSPITALITY POSITIONS:</h1>
                      <ul className="desc-list">
-                        
+                         
                         <li>Hotel Receptionist</li>
                         <li>Hotel Manager</li>
                         <li>Hotel Housekeeper</li>
@@ -44,8 +45,8 @@ const WorkDescription = (props: Props) => {
                             <li>Safety Officer / Health & Safety Manager </li>
                         </ul>
                          <div className="applies-container">
-                    <button className="apply-for-work">Apply Now</button>
-                    <button className="apply-for-work">Contact</button>
+                    <button className="apply-for-work" onClick={()=>window.location.href="/work-form"}>Apply Now</button>
+                    <button className="apply-for-work" onClick={() => (window.location.href = '/contact')}>Contact</button>
                 </div>
                 </div>
                 <div className="line">
@@ -77,8 +78,8 @@ const WorkDescription = (props: Props) => {
                         <li>Window/Door Installer</li>
                     </ul>
                      <div className="applies-container2">
-                    <button className="apply-for-work">Apply Now</button>
-                    <button className="apply-for-work">Contact</button>
+                    <button className="apply-for-work" onClick={()=>window.location.href="/work-form"}>Apply Now</button>
+                    <button className="apply-for-work" onClick={() => (window.location.href = '/contact')}>Contact</button>
                 </div>
                 </div>
                 <div className="line">
@@ -108,8 +109,8 @@ const WorkDescription = (props: Props) => {
                         
                     </ul>
                     <div className="applies-container3">
-                    <button className="apply-for-work">Apply Now</button>
-                    <button className="apply-for-work">Contact</button>
+                    <button className="apply-for-work" onClick={()=>window.location.href="/work-form"}>Apply Now</button>
+                    <button className="apply-for-work" onClick={() => (window.location.href = '/contact')}>Contact</button>
                 </div>
                 </div>
                 

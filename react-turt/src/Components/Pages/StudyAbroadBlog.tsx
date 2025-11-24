@@ -1,17 +1,16 @@
-import { useNavigate } from "react-router-dom";
-import BlogPicture from "../../assets/Quyen-B.jpg";
+
 import WorkAbroadPicture from "../../assets/istockphoto-1414982113-612x612.jpg"
 import { BlogList } from "../BlogData";
 import MarqueeText2 from "../MarqueeText2";
 import "./Css/WorkAbroad.css"
 import abroadStudy from "../../assets/award-hero-bg.jpg"
 
-type Props = {}
 
-const StudyAbroadBlog= (props: Props) => {
-  const navigate = useNavigate();
+
+const StudyAbroadBlog= () => {
+
   return (
-    <>
+    <> 
     <div className="blog-page">
     <img
       src={WorkAbroadPicture}
@@ -19,19 +18,17 @@ const StudyAbroadBlog= (props: Props) => {
       className="Blog-picture"
     />
     <div>
-      <h1 className="blog-title">  🎓<br/> 5 Reasons Why Studying Abroad<br/> Could Change Your Life</h1>
+      <h1 className="blog-title-for-topic">  🎓<br/> 5 Reasons Why Studying Abroad<br/> Could Change Your Life</h1>
       {BlogList.map((blog)=>{
         return(
           <div>
-            <p className="blog-date">{blog.blogDate1} </p>
+            <p className="date-for-blogs">{blog.blogDate1} </p>
           </div>
         )})}
     </div>
-    
+       <MarqueeText2/>
   </div>
-  <div>
-      <MarqueeText2/>
-    </div>
+  
   <div className="work-abroad-container">
     <div className="work-abroad-content">
       {/* <img src={WorkAbroadPicture} alt="work-abroad-pic" className="work-abroad-picture"/> */}
@@ -72,7 +69,7 @@ You won’t just come home with credits. You’ll come home with unforgettable s
     <h1 className="global-text">Conclusion</h1>
     <h1 className="work-abroad-title">Ready to start your studies abroad? Explore current opportunities, visa tips, and destination guides in many Universities across the World.</h1>
     <h1 className="work-abroad-title">Would you like me to tailor this blog post to a specific country, industry (e.g. healthcare, tech), or audience (e.g. students, skilled workers)?</h1>
-    <button className="wbtn-get" onClick={()=>navigate('/contact')}>Get in Touch with Us </button>
+    <button className="wbtn-get" onClick={() => window.location.href = '/contact'}>Get in Touch with Us </button>
     <hr/>
     <h1 className="global-text">Conclusion</h1>
     </div>

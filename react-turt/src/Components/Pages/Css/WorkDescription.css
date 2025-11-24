@@ -58,10 +58,10 @@
     animation: slideIn 0.7s ease;
 }
 .desc-list{
-    font-family: 'Eristone';
+   
     color: white;
     margin-left: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 5px;
     border-radius: 20px;
     }
@@ -79,7 +79,7 @@
     cursor: pointer;
 }
 .apply-for-work:hover{
-    background-color: rgba(255, 0, 98, 0.5);
+    background-color: rgb(57, 165, 47);
     color: #ffffff;
 }
 .work-description-title{
@@ -108,8 +108,8 @@
 }
 .line{
     width: 25%;
-    height: 140vh;
-    background-color: #eb0766;
+    height: 100%;
+    background-color: #479457;
     margin: 0 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -134,7 +134,7 @@
     color: #ffffff;
     margin-left: 20px;
     text-decoration: underline;
-    font-family: 'Eristone';
+    
     font-weight: bold;
 }
 .applies-container{
@@ -150,4 +150,219 @@
     display: flex;
     flex-direction: row;
     margin-top: 165px;
+}
+.work-description-full-page{
+  height: 100%;
+}
+
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .desc-im {
+    height: 60vh;
+  }
+  .work-description-title {
+    font-size: 2.2rem;
+    top: 30%
+  }
+  .hiring {
+    font-size: 0.95rem;
+    width: 70%;
+    text-align: center;
+    margin-top: -50px;
+  }
+  .desc-text {
+    font-size: 1.2rem;
+    padding: 14px;
+  }
+  .list-head {
+    font-size: 1.4rem;
+    margin-left: 14px;
+  }
+  .line {
+    min-height: 280px;
+    flex: 1 1 calc(25% - 10px);
+  }
+  .apply-for-work {
+    margin-left: 14px;
+    font-size: .85rem;
+
+  }
+}
+
+/* Mobile landscape & small tablets */
+@media screen and (max-width: 768px) {
+  .desc-im {
+    height: 50vh;
+    min-height: 300px;
+  }
+  .work-description-title {
+    font-size: 1.8rem;
+    top: 20%;
+    
+  }
+  .hiring {
+    font-size: 0.9rem;
+    width: 90%;
+    top: 40%;
+    text-align: center;
+    
+  }
+  .desc-text {
+    font-size: 1rem;
+    padding: 12px;
+    margin-left: 0;
+  }
+  .list-head {
+    font-size: 1.1rem;
+    margin-left: 12px;
+  }
+  .long-line-for-test {
+    gap: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  .line {
+    min-height: 240px;
+    flex: 1 1 calc(50% - 10px);
+    padding: 12px;
+    width: 85%;
+  }
+  .apply-for-work {
+    margin-left: 12px;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+  .applies-container,
+  .applies-container2,
+  .applies-container3 {
+    margin-top: 12px;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+  .desc-im {
+    height: 40vh;
+    min-height: 240px;
+  }
+  .work-description-title {
+    font-size: 1.4rem;
+    top: 35%;
+  }
+  .hiring {
+    font-size: 0.85rem;
+    top: 75%
+  }
+  .desc-text {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+  .list-head {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+  .long-line-for-test {
+    gap: 8px;
+    padding: 8px;
+    flex-direction: column;
+  }
+  .line {
+    width: 100%;
+    min-height: 200px;
+    flex: 1 1 100%;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .apply-for-work {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    padding: 8px 10px;
+    width: auto;
+  }
+  .applies-container,
+  .applies-container2,
+  .applies-container3 {
+    margin-top: 8px;
+  }
+}
+
+/* Large desktops — 1201px to 1600px */
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+  .desc-im {
+    height: 80vh;
+  }
+  .work-description-title {
+    font-size: 3.2rem;
+  }
+  .desc-text {
+    font-size: 1.8rem;
+    padding: 24px;
+    margin-left: 32px;
+  }
+  .list-head {
+    font-size: 2rem;
+    margin-left: 32px;
+  }
+  .line {
+    min-height: 380px;
+    padding: 20px;
+  }
+    .hiring{
+        width: 70%;
+        text-align: center;
+    }
+    .line{
+        width: 90%;
+    }
+}
+
+/* Extra large screens — 1601px+ */
+@media screen and (min-width: 1601px) {
+  .desc-im {
+    height: 90vh;
+  }
+  
+  .work-description-title {
+    font-size: 3.8rem;
+  }
+  .desc-text {
+    font-size: 2rem;
+    padding: 32px;
+    margin-left: 48px;
+  }
+  .list-head {
+    font-size: 2.2rem;
+    margin-left: 48px;
+  }
+  .line {
+    min-height: 420px;
+    padding: 24px;
+  }
+  .apply-for-work {
+    margin-left: 48px;
+    font-size: 1.4rem;
+    padding: 14px 28px;
+  }
+}
+@media screen and (max-width: 1096px) {
+    .hiring{
+        width: 90%;
+        text-align: center;
+    }
+    .line{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1201px) {
+
+    .line{
+        width: 90%;
+    }
+    .hiring{
+        text-align: center;
+        width: 90%;
+    }
 }

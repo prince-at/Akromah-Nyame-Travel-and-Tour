@@ -3,14 +3,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 30px;
+    flex-direction: column;
     
 }
 .abroad-container{
     width: 90%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
+}
+.process-duration{
+    color: rgb(22, 165, 77);
 }
 .study-list1{
   
@@ -20,7 +24,7 @@
 }
 .study-country-images{
     width: 1000px;
-    height: 400px;
+    height: 500px;
     display: flex;
     border-radius: 36px;
     object-fit: cover;
@@ -42,7 +46,13 @@
     border-radius: 150px;
 
     align-items: center;
-    /* position: absolute; */
+    /* position: abso
+    ute; */
+}
+
+.country-button-text{
+    font-size: 14px;
+    font-weight: 300;
 }
 .study-text-on-image{
     position: absolute;
@@ -60,13 +70,37 @@
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     transition: letter-spacing 0.3s ease, background-color 0.3s;
     letter-spacing: normal;
 }
+.study-apply-now-button-touch{
+    width: 100%;
+    height: 50px;
+   
+    color: #ce5263;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border-width:2px;
+    border-color:#ce5263;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: letter-spacing 0.3s ease, background-color 0.3s;
+    letter-spacing: normal;
+}
+
+.study-apply-now-button-touch:hover{
+    background-color: coral;
+    color: white;
+     cursor: pointer;
+    letter-spacing: 2px;
+}
+
 .study-apply-now-button:hover{
     background-color: #b43f4d;
      cursor: pointer;
@@ -79,23 +113,83 @@
     font-family: 'Helvetica-Bold';
     line-height: 1.1;
 }
+
+.study-abroad-list-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fully-funded-scholarship{
+    color: rgb(56, 179, 8);
+    
+    font-family: 'Helvetica-Bold';
+    line-height: 1.1;
+    font-size: 1.5rem;
+    
+}
+.touch-to-apply{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-for-image{
+    cursor: pointer;
+}
+.container-for-image:hover{
+    opacity: 0.7;
+}
+
 .place-to-study-header{
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+  
+   
+}
+.where-to-study{
+    width: 70%;
+    border-bottom-width: 2px;
+    border-color: black;
+    margin-left: 90px;
+}
+
+.fully-funded-scholarship{
+    font-size: 2rem;
+
+}
+.study-touch{
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+}
+.study-touch:hover{
+    color: rgb(42, 179, 29);
+}
+.touch-to-apply{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
    
 }
 .more-to-see{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    padding-top: 15px;
+    padding-top: 25px;
     align-items: center;
-    justify-content: flex-end;
+    justify-content:center;
     transition: letter-spacing 0.3s ease, background-color 0.3s;
-   
+    
 }
 .right{
     padding-left: 5px;
+    margin-bottom: 15px;
 }
 @keyframes slide-in {
   from {
@@ -112,6 +206,612 @@
     text-decoration: underline;
     color: #ce5263;
     cursor: pointer;
-     letter-spacing: 2px;
+     letter-spacing: 1px;
    
+}
+
+@media screen and (max-width:786px){
+    .place-to-study-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    
+    /* padding-top: 50px; */
+    
+}
+
+.touch-to-apply{
+    margin-bottom:15px ;
+}
+
+.abroad-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column !important;
+
+}
+
+.study-list1{
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+
+.study-apply-now-button-touch{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-color: #ce5263;
+    color:#ce5263 ;
+    border-radius: 10px;
+    border-width: 2px;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: letter-spacing 0.3s ease, background-color 0.3s;
+    letter-spacing: normal;
+}
+
+/* .study-country-images{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    border-radius: 26px;
+    object-fit: cover; 
+      
+} */
+
+.study-abroad-image{
+     margin-left: 20px;
+     position: relative;
+     
+    
+}
+.heart-icon-2{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    border-radius: 150px;
+
+    align-items: center;
+    /* position: absolute; */
+}
+.study-text-on-image{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: white;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px black;
+}
+.where-to-study{
+    display: flex;
+    flex-direction: column;
+    width: 70vh;
+    justify-content: center;
+}
+
+.span-text-column-row{
+    height: 100%;
+    position: relative;
+}
+
+.study-apply-now-button{
+    width: 100%;
+    height: 50px;
+    background-color: #ce5263;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #ce5263;
+    display: flex;
+    flex-direction: row;
+    transition: letter-spacing 0.3s ease, background-color 0.3s;
+    letter-spacing: normal;
+}
+.study-apply-now-button:hover{
+    background-color: #b43f4d;
+     cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.place-to-study-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    
+   }
+   
+.more-to-see{
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    align-items: center;
+    justify-content: flex-end;
+    transition: letter-spacing 0.3s ease, background-color 0.3s;
+    
+}
+
+.choose-why{
+    font-size: 20px;
+}
+.study-list1{
+  
+    display: flex;
+    flex-direction: column;
+ 
+}
+.study-country-images{
+    width: 1000px;
+    height: 170px;
+    display: flex;
+    border-radius: 26px;
+    object-fit: cover;
+    margin-bottom: 10px;
+      
+}
+
+.study-abroad-image{
+     margin-left: 20px;
+     position: relative;
+    
+}
+
+
+.study-apply-now-button:hover{
+    background-color: coral;
+     cursor: pointer;
+    letter-spacing: 2px;
+} 
+
+.study-apply-now-button-touch:hover{
+    background-color: coral;
+     cursor: pointer;
+     color: white;
+    letter-spacing: 2px;
+} 
+.place-to-study{
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-family: 'Helvetica-Bold';
+    line-height: 1.1;
+}
+
+
+.right{
+    padding-left: 5px;
+}
+.country-images{
+    height: 350px;
+    width: 100%;
+}
+.container-for-image{
+    height: 300px;
+    width: 100%;
+}
+.span-text{
+    width: 100%;
+ 
+}
+
+}
+
+/*--------------Responsiveness for tablet view---------------*/
+@media screen and (max-width:1024px){
+    .place-to-study-container{
+    width: 100%;
+    
+    
+    /* padding-top: 50px; */
+    
+}
+.touch-to-apply{
+    margin-bottom:15px ;
+}
+
+.abroad-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.study-list1{
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+
+.where-to-study{
+    margin-left: 0;
+}
+.study-apply-now-button-touch{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-color: #ce5263;
+    color:#ce5263 ;
+    border-radius: 10px;
+    border-width: 2px;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: letter-spacing 0.3s ease, background-color 0.3s;
+    letter-spacing: normal;
+}
+
+.study-country-images{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    border-radius: 26px;
+    object-fit: cover; 
+      
+}
+.study-abroad-image{
+     margin-left: 20px;
+     position: relative;
+    
+}
+
+
+/* .working-department{
+    display: flex;
+    flex-direction: column;
+} */
+.heart-icon-2{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 70%;
+    border-radius: 150px;
+
+    align-items: center;
+    /* position: absolute; */
+}
+.study-text-on-image{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: white;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px black;
+}
+.where-to-study{
+    display: flex;
+    flex-direction: column;
+   width: 90%;
+   
+    
+}
+.study-apply-now-button{
+    width: 100%;
+    height: 50px;
+    background-color: #ce5263;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #ce5263;
+    display: flex;
+    flex-direction: row;
+    transition: letter-spacing 0.3s ease, background-color 0.3s;
+    letter-spacing: normal;
+}
+.study-apply-now-button:hover{
+    background-color: #b43f4d;
+     cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.place-to-study-header{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.place-to-study-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.more-to-see{
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    align-items: center;
+    justify-content: center;
+    transition: letter-spacing 0.3s ease, background-color 0.3s;
+    
+}
+.right{
+    padding-left: 5px;
+}
+.choose-why{
+    font-size: 20px;
+}
+.study-list1{
+  
+    display: flex;
+    flex-direction: column;
+ 
+}
+.span-text-column-row{
+    height: 100px;
+}
+
+.study-country-images{
+    width: 1000px;
+    height: 170px;
+    display: flex;
+    border-radius: 26px;
+    object-fit: cover;
+    margin-bottom: 10px;
+      
+}
+
+.study-abroad-image{
+     margin-left: 20px;
+     position: relative;
+    
+}
+
+.country-images{
+    height: 300px;
+}
+.container-for-image{
+    height: 100px;
+}
+.study-apply-now-button:hover{
+    background-color: coral;
+     cursor: pointer;
+    letter-spacing: 2px;
+} 
+
+.working-department{
+    width: 100%;
+}
+
+.study-apply-now-button-touch:hover{
+    background-color: coral;
+     cursor: pointer;
+     color: white;
+    letter-spacing: 2px;
+} 
+.place-to-study{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 700;
+    font-family: 'Helvetica-Bold';
+    line-height: 1.1;
+}
+.place-to-study-header{
+    display: flex;
+    height: auto;
+    flex-direction: column;
+   
+}
+
+.right{
+    padding-left: 5px;
+}
+
+}
+
+
+
+/*small laptop */
+@media screen and (max-width:1280px){
+    .place-to-study-container{
+    width: 100%;
+    
+    
+    /* padding-top: 50px; */
+    
+}
+.touch-to-apply{
+    margin-bottom:15px ;
+}
+
+.abroad-container{
+    width: 90%;
+    display: flex;
+    
+
+}
+
+.study-list1{
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+
+.study-apply-now-button-touch{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-color: #ce5263;
+    color:#ce5263 ;
+    border-radius: 10px;
+    border-width: 2px;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: letter-spacing 0.3s ease, background-color 0.3s;
+    letter-spacing: normal;
+}
+
+.study-country-images{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    border-radius: 26px;
+    object-fit: cover; 
+      
+}
+.study-abroad-image{
+     margin-left: 20px;
+     position: relative;
+    
+}
+.heart-icon-2{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 70%;
+    border-radius: 150px;
+
+    align-items: center;
+    /* position: absolute; */
+}
+.study-text-on-image{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: white;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px black;
+}
+.where-to-study{
+    display: flex;
+    flex-direction: column;
+   
+   
+    
+}
+.study-apply-now-button{
+    width: 100%;
+    height: 50px;
+    background-color: #ce5263;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #ce5263;
+    display: flex;
+    flex-direction: row;
+    transition: letter-spacing 0.3s ease, background-color 0.3s;
+    letter-spacing: normal;
+}
+.study-apply-now-button:hover{
+    background-color: #b43f4d;
+     cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.place-to-study-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+   
+}
+
+.right{
+    padding-left: 5px;
+}
+.choose-why{
+    font-size: 30px;
+}
+.study-list1{
+  
+    display: flex;
+    flex-direction: column;
+ 
+}
+.study-country-images{
+    width: 1000px;
+    height: 170px;
+    display: flex;
+    border-radius: 26px;
+    object-fit: cover;
+    margin-bottom: 10px;
+      
+}
+
+.study-abroad-image{
+     margin-left: 20px;
+     position: relative;
+    
+}
+
+
+.study-apply-now-button:hover{
+    background-color: coral;
+     cursor: pointer;
+    letter-spacing: 2px;
+} 
+
+.study-apply-now-button-touch:hover{
+    background-color: coral;
+     cursor: pointer;
+     color: white;
+    letter-spacing: 2px;
+} 
+.place-to-study{
+   
+    color: black;
+    font-weight: 700;
+    font-family: 'Helvetica-Bold';
+    line-height: 1.1;
+}
+.place-to-study-header{
+    display: flex;
+    height: auto;
+    flex-direction: column;
+   
+}
+
+.right{
+    padding-left: 5px;
+}
+
+    
+}
+
+@media screen and (max-width:480px){
+    .abroad-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .place-to-study-header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .where-to-study{
+        width: 90%;
+       margin-left: 0;
+    }
+    .place-to-study{
+        font-size: 34px;
+    }
+    .study-touch{
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+    }
+  .study-touch-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

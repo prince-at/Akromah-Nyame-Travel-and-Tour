@@ -1,15 +1,15 @@
- import React from 'react'
+
 import { ServicesData } from './ServicesList'
 import "./ContentService.css"
-import HotelReservation from '../HotelReservation'
+
 import { HotelReservationData } from '../HotelReservationList'
 
 
 
 
-type Props = {}
 
-const ServiceContent = (props: Props) => {
+
+const ServiceContent = () => {
   return (
     <>
     

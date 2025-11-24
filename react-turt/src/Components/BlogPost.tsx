@@ -1,16 +1,17 @@
 import React from "react";
 import { BlogList } from "./BlogData";
 import "./Pages/BlogPost.css";
-import Subscribe from "./Subscribe";
-import { useNavigate } from "react-router-dom";
 
-type Props = {};
+
+
+type Props = {}; 
 
 const BlogPost: React.FC<Props> = () => {
-    const navigate = useNavigate();
+   
   return (
-    <>
-    <div className="blog-post">
+    <div className="blog-post-page-container">
+  
+        <div className="blog-post">
       <div className="blog-post-outer">
         {BlogList.map((blog, index) => {
           return (
@@ -21,12 +22,12 @@ const BlogPost: React.FC<Props> = () => {
                   alt="Blog Image"
                   className="blog-image"
                 />
-                <h1 className="title-blog">{blog.blogTitle}</h1>
                 <p className="blog-date">{blog.blogDate}</p>
+                <h1 className="title-blog">{blog.blogTitle}</h1>
                 <p className="blog-description">{blog.blogDescription}</p>
                 <button className="button-content"
                 onClick={()=>
-                    navigate(blog.route)
+                    (window.location.href = blog.route)
                 }>{blog.buttonText}</button>
               </div>
             </div>
@@ -34,8 +35,14 @@ const BlogPost: React.FC<Props> = () => {
         })}
       </div>
     </div>
+        {/* <div className="blog-post-rows">
+          <div className="blog-post-first-row"></div>
+          <div className="blog-post-second-row"></div>
+        </div> */}
+    
+    
      
-     </>
+     </div>
   );
 };
 

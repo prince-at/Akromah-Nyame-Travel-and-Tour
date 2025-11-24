@@ -3,7 +3,7 @@
   background: #222;
   color: #fff;
   padding: 32px 0 16px 0;
-  
+  height: auto;
  
 }
 .footer-content {
@@ -16,7 +16,7 @@
   margin-bottom: 12px;
 }
 .footer-links {
-  width: 18%;
+  width: 100%;
   margin: 16px 0;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
   transition: color 0.2s;
 }
 .footer-links a:hover {
-  color: #f39c12;
+  color: #16a722;
 }
 .footer-copy {
   font-size: 0.95rem;
@@ -47,20 +47,27 @@
   justify-content: space-between;
 }
 .footer-logo{
-  width: 18%;
-  height: auto;
+  width: 100%;
   display: flex;
-
+  flex-direction: column;
+  height: auto;
+  padding-top: 50px;
+  justify-content: center;
   align-items: center;
+ 
 }
 .footer-contact{
-  width: 35%;
+  width: 100%;
+  margin-left: 20px;
+}
+.apply-links{
+  font-size: 15px;
 }
 .footer-social{
-  width: 18%;
+  width: 100%;
 }
 .footer-subscribe{
-  width: 30%;
+  width: 100%;
 }
 .sub-news{
   font-size: 24px;
@@ -69,7 +76,174 @@
   color: #ce5263;
 }
 .footer-logo-img{
-  width: 95%;
+  width: 75%;
   height: auto;
-  padding-right: 30px;
+  
+}
+.footer-account{
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-account:hover {
+  color: #f71862;
+}
+.phone-numbers{
+  color: aliceblue;
+   
+ 
+}
+.phone-numbers:hover{
+  color:rgb(16, 148, 16) ;
+}
+.footer-tablet{
+  display: none;
+}
+
+.footer-desktop{
+  display: block;
+}
+.leave-review{
+  color: #ffffff;
+}
+.leave-review:hover{
+  color: rgb(32, 173, 19);
+}
+.contacts-box{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+ 
+}
+.contact-mptel{
+  margin-right: 10px;
+}
+.apply-links{
+  width: 100%;
+}
+.contacts-box{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .contacts-box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+}
+
+/* Mobile / small phones */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 24px 12px;
+  }
+  .footer-content {
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-logo, .footer-links, .footer-social, .footer-subscribe {
+    width: 100%;
+    min-width: auto;
+    flex: none;
+    padding: 8px 0;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .footer-links a {
+    margin: 6px 8px;
+  }
+  .footer-logo-img { width: 56px; }
+  .sub-news { font-size: 20px; }
+  .footer-subscribe{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .newsletter-footer-subscribe{
+    display: flex;
+    justify-content: center;
+  }
+  .footer-logo-img{
+    width: 70%;
+  }
+  .footer-desktop{
+    display: block;
+  }
+  .footer-tablet{
+    display: none;
+  }
+  .footer-content-column{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+  .footer { padding: 20px 10px; }
+  .footer-links { gap: 8px; }
+  .apply-links { font-size: 14px; }
+  .sub-news { font-size: 18px; }
+  .footer-copy { font-size: 0.9rem; }
+  .footer-row { gap: 12px; }
+  .footer-tablet{
+    display: none;
+  }
+  .footer-desktop{
+    display: block;
+  }
+}
+
+/* Large desktops */
+@media screen and (min-width: 1201px) {
+  .footer-content { max-width: 1400px; padding-inline: 24px; }
+  .footer-logo { flex: 0 0 18%; }
+  .footer-links { flex: 0 0 18%; }
+  .footer-contact { flex: 0 0 24%; }
+  .footer-subscribe { flex: 0 0 28%; }
+  .footer-logo-img { width: 95%; max-width: 140px; }
+  .footer-copy { text-align: center; }
+  .footer-desktop{display: block}
+  .footer-tablet{display: none;}
+}
+
+/*small laptop screen*/
+@media screen and (max-width: 1096px){
+  .footer-desktop{
+    display: block;
+  }
+  .footer-tablet{
+    display: none;
+  }
+  .footer-logo-img{
+    width: 50%;
+  }
+  .footer-logo{
+    width: 100%;
+  }
+  .footer-links{
+    width: 100%;
+  }
+  .footer-contact{
+    width: 100%;
+  }
 }

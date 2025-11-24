@@ -1,10 +1,9 @@
-import React from 'react'
-import { HotelReservationData } from './HotelReservationList'
+
 import { ServicesData } from './scene/ServicesList'
 
-type Props = {}
 
-const HotelReservation = (props: Props) => {
+
+const HotelReservation = () => {
   return (
     <div>
          <div className='cont-1'>
