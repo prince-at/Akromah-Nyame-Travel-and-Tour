@@ -10,9 +10,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay} from "swiper/modules";
-import "swiper/css";
-import "swiper/css/bundle";
-import "swiper/css/autoplay"; 
+// import "swiper/css";
+// import "swiper/css/bundle";
+// import "swiper/css/autoplay"; 
 
 const reviews = [
   {

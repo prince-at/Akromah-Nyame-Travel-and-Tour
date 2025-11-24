@@ -1,8 +1,8 @@
-import React from 'react'
-import './Pages/Marquee.css'
-type Props = {}
 
-const MarqueeText = (props: Props) => {
+import './Pages/Marquee.css'
+
+
+const MarqueeText = () => {
   return (
     <div className="marquee-container">
     <div className="marquee-text">

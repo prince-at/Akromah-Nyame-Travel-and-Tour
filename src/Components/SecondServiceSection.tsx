@@ -7,10 +7,10 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 // ✅ Import Swiper styles (bundle covers everything)
 
-import "swiper/css"; 
-import "swiper/css/bundle";
+// import "swiper/css"; 
+// import "swiper/css/bundle";
 
-import "swiper/css/autoplay"; 
+// import "swiper/css/autoplay"; 
 
  
 const SecondServiceSection = () => { 

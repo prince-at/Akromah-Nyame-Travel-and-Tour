@@ -36,8 +36,8 @@ const HotelReservationForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const [showForm, setShowForm] = useState(true);
-  const [pending, setPending] = useState(false);
+  const [showForm] = useState(true);
+  const [pending] = useState(false);
   const [submitting, setSubmitting] = useState(false)
   
 
@@ -115,7 +115,7 @@ const HotelReservationForm = () => {
     formData,
     'sxNXhhdmfs4PERfr5'
   ).then(() => { 
-        setSubmitted(true);
+        // setSubmitted(true);
       })
       .catch((error) => {
         console.error('Error sending bookings:', error);
@@ -464,6 +464,5 @@ const HotelReservationForm = () => {
 
 export default HotelReservationForm;
 
-function setSubmitted(arg0: boolean) {
-  throw new Error("Function not implemented.");
-}
+
+

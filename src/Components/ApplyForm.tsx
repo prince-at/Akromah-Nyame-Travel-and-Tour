@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Pages/Css/ApplyForm.css";
 import online from "../assets/online-booking-traveling-plane-flight-concept.jpg";
-import axios from "axios";
+
 import emailjs from 'emailjs-com';
 
 import {
@@ -22,7 +22,7 @@ import "react-phone-input-2/lib/style.css";
 
 const ApplyForm = () => {
   
-  const [showForm, setShowForm] = useState(true);
+  const [showForm] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -118,7 +118,7 @@ const ApplyForm = () => {
       formData,
       'HhqUyF1jUN-Tko0hm'
     ).then(() => { 
-        setSubmitted(true);
+        
       })
       .catch((error) => {
         console.error('Error sending bookings:', error);
@@ -372,11 +372,5 @@ const ApplyForm = () => {
 };
 
 export default ApplyForm;
-
-function resetForm() {
-  throw new Error("Function not implemented.");
-}
-function setSubmitted(arg0: boolean) {
-  throw new Error("Function not implemented.");
-}
+ 
 

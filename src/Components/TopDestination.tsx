@@ -1,9 +1,9 @@
-import React from 'react'
+
 import { Destination } from './scene/DestinationList'
 
-type Props = {}
 
-const TopDestination = (props: Props) => {
+
+const TopDestination = () => {
   return (
     <div className='destinationContainer'>
         {

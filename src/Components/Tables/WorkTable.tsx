@@ -1,8 +1,8 @@
 import "../Pages/Css/PendingList.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 // import { useLocation } from 'react-router-dom';
-import axios from "axios";
+
 
 
 type Props = {
@@ -43,9 +43,8 @@ const TableList = ({
 }: Props) => {
   // const location = useLocation();
   // const [submissions, setSubmissions] = useState<Props[]>([]);
-  const [applications, setApplications] = useState<Props[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [applications] = useState<Props[]>([]);
+
 
   // useEffect(() => {
   //   const fetchApplications = async () => {

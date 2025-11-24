@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import './Pages/Css/PendingList.css'
-import TableList from './TableList'
+
 import StudyTable from './Tables/StudyTable'
 
 const PendingStudy = () => {

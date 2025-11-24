@@ -1,12 +1,11 @@
-import bannerImage from "../assets/photo-1725977098424-19ea46553f23.avif";
-import planephoto from "././images-services/planephoto.png"
-import "./scene/Banner.css";
+import planephoto from "././images-services/planephoto.png"  
+import "./scene/Banner.css";  
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import roadmap from "././images-services/roadmap.jpg"
 import buildings from "././images-services/building.jpg"
-import "swiper/css";
-import "swiper/css/bundle";
-import "swiper/css/autoplay"; 
+// import "swiper/css";
+// import "swiper/css/bundle";
+// import "swiper/css/autoplay"; 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Banner = () => {

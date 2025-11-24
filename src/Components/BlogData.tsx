@@ -1,4 +1,4 @@
-import { button } from "framer-motion/client";
+
 import blogImg from "../assets/h6-Does-Travel-Insurance-Cover-Working-Abroad.jpg"
 import blogImg2 from "../assets/istockphoto-1414982113-612x612.jpg"
 import blogimg3 from "../assets/3edf25c7.jpg"

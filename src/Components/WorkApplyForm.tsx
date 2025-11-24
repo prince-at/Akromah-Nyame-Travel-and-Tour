@@ -70,7 +70,7 @@ const WorkApplyForm = () => {
       formData,
       'TKq-F8d79Xf1rbS6t'
     ).then(() => { 
-        setSubmitted(true);
+ 
       })
       .catch((error) => {
         console.error('Error sending bookings:', error);
@@ -334,7 +334,4 @@ const WorkApplyForm = () => {
 };
 
 export default WorkApplyForm;
-
-function setSubmitted(arg0: boolean) {
-  throw new Error("Function not implemented.");
-}
+ 

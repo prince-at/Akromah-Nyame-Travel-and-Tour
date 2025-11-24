@@ -49,7 +49,7 @@ const DocumentForm = () => {
       formData,
       'I4Dp3q69BbXz8edQM'
     ).then(() => { 
-        setSubmitted(true);
+        // setSubmitted(true);
       })
       .catch((error) => {
         console.error('Error sending bookings:', error);
@@ -240,6 +240,4 @@ const DocumentForm = () => {
 
 export default DocumentForm;
 
-function setSubmitted(arg0: boolean) {
-  throw new Error("Function not implemented.");
-}
+

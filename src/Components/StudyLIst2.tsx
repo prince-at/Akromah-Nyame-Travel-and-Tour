@@ -4,7 +4,7 @@ import canada from '../../src/images/Screenshot 2025-06-20 003748.png'
 import france from '../../src/images/home-destination3fr.jpg'
 import usa from '../../src/images/—Pngtree—american flag paint stroke on_9269417.png'
 import uk from '../../src/images/Screenshot 2025-06-20 231042.jpg'
-import canadaUniversity from '../../src/images/Screenshot 2025-06-20 010949.jpg'
+
 export const StudyingData2 =[
     {picture: germany, text: 'Study in Germany',text1: 'We provide comprehensive support tailored to your goals:',
         list1: '1. Career Counseling & University Selection.',

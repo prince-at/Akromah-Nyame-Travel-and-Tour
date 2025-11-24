@@ -8,12 +8,12 @@ import  serviceImag3 from "../../Components/images-services/close-up-man-holding
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/bundle";
+// import "swiper/css";
+// import "swiper/css/bundle";
 // import "swiper/css/navigation";
 // import "swiper/css/pagination";
 // import "swiper/css/scrollbar";
-import "swiper/css/autoplay"; 
+// import "swiper/css/autoplay"; 
 import { FaBriefcase, FaGraduationCap, FaPassport, FaPlaneDeparture } from "react-icons/fa";
 import ReviewForm from "../ReviewForm";
 
