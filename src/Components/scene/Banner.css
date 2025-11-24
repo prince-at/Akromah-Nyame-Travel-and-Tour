@@ -1,0 +1,183 @@
+.antnt {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 3.2rem;
+    font-family: 'Helvetica-Bold';
+    position: absolute;
+    top: 40%;
+    width: 90%; /* Changed from 60% to be more flexible */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: slideIn 0.7s ease;
+    line-height: 1.1;
+} 
+
+.akroma-nyame {
+    width: 100%;
+    height: 30vh;
+    background-color: #e8ecef;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.ban-co {
+    width: 100%;
+    height: 90vh;
+    background-color: #000000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    width: 100%;
+    height: 90vh; /* Changed from fixed height to auto */
+    
+    
+    /* Minimum height to ensure content visibility */
+    display: flex;
+    opacity: 1;
+    object-fit: cover;
+}
+
+
+.uae-test {
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    color: white;
+    font-size: 16px;
+    top: 60%;
+    left: 50%; /* Changed from 46% for better centering */
+    width: 90%; /* Changed from 50% to be more flexible */
+    transform: translate(-50%, -50%);
+    animation: slideIn 0.7s ease;
+}
+
+.banner-button {
+    width: 200px;
+    color: coral;
+    /* background-color: #ce5263; */
+    border-radius: 10px;
+    transition: letter-spacing 0.3s ease, background-color 0.3s;
+    letter-spacing: normal;
+    position: absolute;
+    top: 100%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: coral;
+    justify-self: center;
+    align-items: center;
+    padding: 15px;
+} 
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+    .antnt {
+        font-size: 2.8rem;
+    }
+    .visa-guaranteed{
+        font-size: 18px;
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .antnt {
+        font-size: 2.2rem;
+        width: 95%;
+        text-align: center;
+        top:30%
+    }
+    .banner{
+        min-height: 100vh;
+       
+        object-fit: cover;
+    }
+    
+    .uae-test {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        top:45%
+    }
+    .visa-guaranteed{
+        font-size: 16px;
+        margin-top: 30px;
+        font-family: 'Helvetica-Regular';
+
+    }
+    .banner-button { 
+        width: 180px;
+        padding: 12px;
+        top: 140%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .antnt {
+        font-size: 1.8rem;
+        top: 35%;
+    }
+    .ban-co {
+    width: 100%;
+    height: 550px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    width: 100%;
+    height: 550px; /* Changed from fixed height to auto */
+    min-height: 100vh; /* Minimum height to ensure content visibility */
+    display: flex;
+    opacity: 0.4;
+}
+
+    .uae-test { 
+        font-size: 12px;
+        top: 45%;
+    }
+    
+    .banner-button {
+        width: 150px;
+        padding: 10px;
+    }
+    
+    .akroma-nyame {
+        height: 25vh;
+    }
+}
+
+/* Keep existing animations and other styles */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-70%, -50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.banner-button:hover {
+    background-color: coral;
+    letter-spacing: 1px;
+    
+    color: white;
+}
+
+ol, ul {
+    padding-left: 0px !important;
+}
+
+dl, ol, ul {
+    margin-bottom: 0px !important;
+}

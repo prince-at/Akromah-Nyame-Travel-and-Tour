@@ -1,0 +1,273 @@
+.vision-background-3{
+    width: 100%;
+    height: 100vh;
+}
+.mission-statement{
+    width: 47.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 40px;
+}
+.vietnam-image{
+    width: 47.5%;
+    object-fit: cover;
+    
+}
+.mission-statement-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.mission-statement-paragraph{
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.get-in-touch{
+    font-size: 12px;
+    padding-top: 50px;
+    font-weight: 700;
+    text-align: center; /* Center text horizontally */
+    margin: 0 auto; /* Center the element horizontally */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+.get-in-touch:hover{
+    color: #db0871;
+    cursor: pointer;
+}
+.do-wanna-miss{
+    font-size:2.5rem;
+    font-weight: bold;
+    padding:  40px;
+
+    font-family: 'Helvetica-Bold';
+    color: black;
+}
+.image-for-visit{
+    width: 100%;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.japan-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   position: relative;
+   
+    
+}
+.japan-photo{
+    width: 90%;
+    object-fit: cover;
+    border-radius: 30px;
+    background-color: black;
+    cursor: pointer;
+     position: relative;
+}
+.japan-title{
+    color: black;
+    display: flex;
+    position: absolute;
+   top: 50%;
+   justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.japan-image-container:hover .japan-title{
+    width: 220px;
+    height: 139px;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.479);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.japan-image-container{
+    width: 90%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* ===== TABLET VIEW (≤ 992px) ===== */
+@media (max-width: 992px) {
+  .vision-background-3 {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .mission-statement {
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .vietnam-image {
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .mission-statement-title {
+    font-size: 1.6rem;
+  }
+
+  .mission-statement-paragraph {
+    font-size: 1rem;
+  }
+
+  .do-wanna-miss {
+    font-size: 2rem;
+  }
+
+  .japan-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .japan-photo {
+    width: 95%;
+  }
+
+  .japan-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* ===== MOBILE VIEW (≤ 600px) ===== */
+@media (max-width: 600px) {
+  .vision-background-3 {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+ 
+  .mission-statement {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .vietnam-image {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .mission-statement-title {
+    font-size: 1.3rem;
+  }
+
+  .mission-statement-paragraph {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .do-wanna-miss {
+    font-size: 1.6rem;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .get-in-touch {
+    font-size: 12px;
+    padding-top: 20px;
+  }
+
+  .japan-container {
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 20px
+    
+  }
+
+  .japan-photo {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
+  }
+
+  .japan-title {
+    width: 180px;
+    height: 100px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+    .vision-background-3 {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .mission-statement {
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .vietnam-image {
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .mission-statement-title {
+    font-size: 1.6rem;
+  }
+
+  .mission-statement-paragraph {
+    font-size: 1rem;
+  }
+
+  .do-wanna-miss {
+    font-size: 2rem;
+  }
+
+  .japan-container {
+    flex-direction: row;
+    height: auto;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .japan-photo {
+    width: 95%;
+  }
+
+  .japan-title {
+    font-size: 1.2rem;
+  }
+    
+
+}
+
+@media screen and (max-width:786px){
+  .japan-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
