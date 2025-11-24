@@ -207,45 +207,8 @@ import PhoneInput from "react-phone-input-2";
                     className="text-input-field" onChange={handleChange} value={formData.currentAddress}
                     name="currentAddress" />
                   </div>
-    
-                  {/* Country */}
-                  {/* <h1 className="label-text">Select </h1>
-                  <div className="input-group">
-                    <FaGlobe className="input-icon" />
-                    <select required value={country} onChange={(e) => setCountry(e.target.value)}
-                      style={{ height: "40px", borderRadius: '5px' }}>
-                      <option value="" >Select Country</option>
-                      <option value="Dubai">Dubai</option>
-                      <option value="Saudi Arabia">Saudi Arabia</option>
-                      <option value="Qatar">Qatar</option>
-                      <option value="Albania">Albania</option>
-                      <option value="Portugal">Portugal</option>
-                      <option value="Italy">Italy</option>
-                      <option value="Canada">Canada</option>
-                      <option value="Australia">Australia</option>
-                      <option value="Germany">Germany</option>
-                      <option value="Malaysia">Malaysia</option>
-                      <option value="France">France</option>
-                      <option value="Japan">Japan</option>
-                      <option value="China">China</option>
-                      <option value="India">India</option>
-                      <option value="Singapore">Singapore</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-    
-                  {country === "Other" && (
-                    <div className="input-group">
-                      <FaGlobe className="input-icon" />
-                      <input type="text" placeholder="Enter Country" 
-                      value={otherCountry} onChange={(e) => 
-                      setOtherCountry(e.target.value)} required 
-                      style={{ height: "40px", borderRadius: '5px' }} className="text-input-field"/>
-                    </div>
-                  )} */}
-    
-                  {/* Work */}
-                  {/* Work */}
+
+                  
                   <h1 className="label-text">Destination</h1>
                   <div >
 

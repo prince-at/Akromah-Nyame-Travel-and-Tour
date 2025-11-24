@@ -165,17 +165,12 @@ function App() {
                     <FormBanner />
                   </ul>
 
-                  {/* <ul>
-                  <BelowSlider />
-                </ul> */}
+                 
                   <div>
                     <ListCountry />
                   </div>
 
-                  {/* <div className='see-more-button'>
-            <button style={{ fontSize: '1.2rem' }}>see more</button>
-            <FaArrowRight className='arrow-icon' style={{ fontSize: '1rem', color: 'black', marginLeft: '10px' }} />
-            </div> */}
+
 
                   <div>
                     <PassionHome />
@@ -187,9 +182,7 @@ function App() {
                   <div className="portfolio-sticky-cover">
                     <Portfolio />
                   </div>
-                  {/* <div className="home-review-container">
-                    <ReviewForm/>
-                  </div> */}
+                  
                   <div className="incoming-view-background-cover">
                     <IncomingReviewContainer />
                   </div>
