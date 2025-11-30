@@ -2,9 +2,11 @@ import { FaArrowRight, FaHeart, FaRegHeart, FaStar } from 'react-icons/fa';
 import '../../src/Components/Pages/Css/PlaceToStudy.css'
 import { PlaceToStudyData, PlaceToStudyData1 } from './PlaceToStudyList';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const PlaceToStudy = () => {
+  const navigate = useNavigate();
   const [liked, setLiked] = useState<boolean[]>(Array(PlaceToStudyData.length).fill(false));
  
   const handleLike = (index: number) => {
@@ -39,8 +41,8 @@ const PlaceToStudy = () => {
             {/* <h1 className='choose-why'>Choose where to Study. </h1> */}
             <p className='place-to-study'>Our Study Abroad offer</p></div>
              <p className='certificate-of-study'>Let's help you with the top university abroad you can study.
-                Degree Programmes, Master's Programmes, PhD Programmes, and more. fully funded scholarships opportunities available.<br/>
-               <div className='study-touch-container'> <span className='study-touch' onClick={()=> window.location.href="/contact"}>Get in Touch</span></div>
+                Degree Programmes, Master's Programmes, PhD Programmes, and more. fully funded scholarships opportunities available.
+              <span className='study-touch' onClick={()=> navigate("/contact")}>Get in Touch</span>
              </p>
              
              
@@ -56,7 +58,7 @@ const PlaceToStudy = () => {
                       return (
                         
                         <div key={index} className="country-item"
-                        onClick={()=>window.location.href='/study-abroad-details'}
+                        onClick={()=>navigate('/study-abroad-details')}
                         >
                           <div className="container-for-image">
                             <img
@@ -99,10 +101,10 @@ const PlaceToStudy = () => {
                             <div className="span-text-column-row">
                             
                               <div className="span-text-column-only-2">
-                                <span className="work-country" onClick={() => (window.location.href = '/study-abroad-details')}>{country.title}</span>
+                                <span className="work-country" onClick={() => navigate('/study-abroad-details')}>{country.title}</span>
                                  {renderStars((country as any).rating || 4)}
                                  <span className="span-title-text">{country.program}</span>
-                                  <span className="process-duration" onClick={()=>window.location.href="/study-abroad-details"}>{country.button}</span>
+                                  <span className="process-duration" onClick={()=>navigate("/study-abroad-details")}>{country.button}</span>
                                   
                               </div>
                             </div>
@@ -113,7 +115,7 @@ const PlaceToStudy = () => {
                             <button
                             className="country-button-text"
                               
-                              onClick={() => (window.location.href = '/form-1')}
+                              onClick={() => navigate('/form-1')}
                             >
                               {country.jobs}
                             </button>
@@ -132,7 +134,7 @@ const PlaceToStudy = () => {
                         
                         <div key={index} className="country-item">
                           <div className="container-for-image"
-                          onClick={()=>window.location.href='/study-abroad-details'}
+                          onClick={()=>navigate('/study-abroad-details')}
                           >
                             <img
                               src={country.studyPicture1}
@@ -178,10 +180,10 @@ const PlaceToStudy = () => {
                             
                               </div>
                               <div className="span-text-column-only-2">
-                                <span className="work-country" onClick={() => (window.location.href = '/study-abroad-details')}>{country.title}</span>
+                                <span className="work-country" onClick={() =>navigate('/study-abroad-details')}>{country.title}</span>
                                  {renderStars((country as any).rating || 4)}
                                  <span className="span-title-text">{country.program}</span>
-                                  <span className="process-duration" onClick={()=>window.location.href="/study-abroad-details"}>{country.button}</span>
+                                  <span className="process-duration" onClick={()=>navigate("/study-abroad-details")}>{country.button}</span>
                                   
                               </div>
                             </div>
@@ -192,7 +194,7 @@ const PlaceToStudy = () => {
                             <button
                             className="country-button-text"
                               
-                              onClick={() => (window.location.href = '/form-1')}
+                              onClick={() => navigate('/form-1')}
                             >
                               {country.jobs}
                             </button>
@@ -207,7 +209,7 @@ const PlaceToStudy = () => {
         
 
     </div>
-       <div className='more-to-see'onClick={()=> (window.location.href = '/study-abroad-details') }>
+       <div className='more-to-see'onClick={()=> navigate('/study-abroad-details') }>
                   
                           <p>See more</p>
                           <FaArrowRight className='right'/>

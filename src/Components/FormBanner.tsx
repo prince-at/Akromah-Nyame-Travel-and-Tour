@@ -5,10 +5,10 @@ import { FaEnvelope } from "react-icons/fa6";
 import emailjs from 'emailjs-com';
 
 const FormBanner = () => {  
-  const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useState(true); 
   const [formData, setFormData] = useState({
     offer: "Select-offer",
-    destination: "",
+    destination: "", 
     requestType: "",
     requirements: "",
     email: "",
@@ -37,7 +37,7 @@ const FormBanner = () => {
       requestType: "",
       requirements: "",
       email: "",
-    });
+    }); 
   };
 
   return (

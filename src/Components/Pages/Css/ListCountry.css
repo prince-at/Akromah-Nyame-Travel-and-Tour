@@ -19,6 +19,7 @@
     height: 620px;
     justify-content: space-between;
     align-items: center;
+   
     
 }
 
@@ -51,7 +52,7 @@
     padding-top: 40px;
 }
 .country-item{
-    width: 100%;
+    width: 90%;
     height: 520px;
     display: flex;
     flex-direction: column;
@@ -81,14 +82,14 @@
 
 .country-images{
     height: 300px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     
     object-fit: cover;
 
 }
 .container-for-image{
-    width: 300px;
+    
     height: 300px;
     position: relative;
       background-color: rgb(255, 255, 255, 0.2);
@@ -533,6 +534,6 @@
        .span-text{
         position: relative;
         height: 100%;
-        margin-top: 50px
+        /* margin-top: 50px */
     }
 }

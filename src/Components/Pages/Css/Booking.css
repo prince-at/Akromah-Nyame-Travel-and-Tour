@@ -116,7 +116,9 @@ textarea:focus{
   border:none;
   font-size:1.4rem;
   line-height:1;
-  color:#dcdcdc;
+  color:#aaaaaa;
+  border-color: #c0392b;
+  border-width: 5px;
   cursor:pointer;
   padding:6px;
   border-radius:6px;
@@ -165,7 +167,7 @@ textarea:focus{
   font-weight: 600;
   box-shadow: 0 6px 18px rgba(206,82,99,0.12);
   transition: background .15s ease, transform .08s ease;
-  display: flex;
+  /* display: flex; */
   
   
   
@@ -361,7 +363,7 @@ textarea:focus{
   }
   .review-form{
     width: 100%;
-    height: 250vh;
+    /* height: 250vh; */
   }
   .service-row-column{
     width: 100%;

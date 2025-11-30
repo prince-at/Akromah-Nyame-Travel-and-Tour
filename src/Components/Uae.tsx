@@ -2,10 +2,19 @@ import { AvailabiltyCheckList } from "./AvailabiltycheckList";
 import "./Pages/Css/AvailabilityCheckPage.css";
 import uaeWorkers from "../images/petrofac-uae-jobs-1700x397.webp";
 import MoreJobs from "./MoreJobs";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Uae = () => { 
+  const navigate =useNavigate();
   return (
-    <div className="availability-check-main-container">
+    <motion.div className="availability-check-main-container"
+     key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -100 }}
+      transition={{ duration: 0.3 }}
+    >
       <div>
         <div className="availability-check-header">
           <img
@@ -27,25 +36,27 @@ const Uae = () => {
                   className="availability-check-image"
                 />
                 <div className="availability-check-details">
-                  <li
+                  <button
                     className="availability-check-item-1"
-                    onClick={() => (window.location.href = "/contact")}
+                    onClick={() => navigate("/contact")}
                     style={{ cursor: "pointer" }}
                   >
                     {item.title}
-                  </li>
+                  </button>
                   <li className="availability-check-item">{item.location}</li>
                   <li className="availability-check-item">
                     {item.availability}
                   </li>
-                  <li
+                  <button
                     className="availability-check-item"
-                    onClick={() => (window.location.href = "/contact")}
+                    onClick={() => navigate("/contact")}
                     style={{ cursor: "pointer" }}
                   >
                     {item.contact}
-                  </li>
-                  <button className="availbility-contact">
+                  </button>
+                  <button className="availbility-contact"
+                  onClick={()=>navigate('/contact')}
+                  >
                     {" "}
                     {item.button}
                   </button>
@@ -54,9 +65,11 @@ const Uae = () => {
             );
           })}
         </div>
+        <div>
         <MoreJobs />
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -3,17 +3,22 @@ import './About.css'
 import travel1 from '../../images/WhatsApp Image 2025-06-29 at 3.08.04 PM.jpeg'
 import travel2 from '../../images/about-us12.jpg'
 import travel3 from '../../images/about-us13.jpg'
-import travel4 from '../../images/about-us14.jpg'
+import travel4  from '../images-services/Terminal-3.jpg'
+import { useNavigate } from 'react-router-dom'
 
 
 
 const Staffs = () => {
+    const navigate =useNavigate();
   return (
     <div className='staff-background'>
     <div className='staffs-container'>
+         <h1 className="about-portfolio">OUR PORTFOLIO</h1>
         <div className='staffs-image-container'>
+           
             <div className='for-only-images'>
-            <div className='staffs-image'>
+                
+            <div className='staffs-image'> 
                 <img src={travel1} alt='travel-man' className='travel-man'/>
                 <img src={travel2} alt='travel-man' className='travel-man-1'/>
             </div>
@@ -40,7 +45,7 @@ const Staffs = () => {
                 </ul>
                 </div>
                 
-                <button className='packages-button' onClick={() => (window.location.href = '/services')} >Find packages</button>
+                <button className='packages-button' onClick={() => navigate('/services')} >Find packages</button>
 
             </div>
         </div>

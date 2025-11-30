@@ -6,6 +6,7 @@
   height: auto;
  
 }
+
 .footer-content {
   max-width: 90%;
   margin: 0 auto;
@@ -62,6 +63,8 @@
 }
 .apply-links{
   font-size: 15px;
+  width: 100%;
+  color: white !important;
 }
 .footer-social{
   width: 100%;
@@ -121,9 +124,7 @@
 .contact-mptel{
   margin-right: 10px;
 }
-.apply-links{
-  width: 100%;
-}
+
 .contacts-box{
   width: 100%;
   display: flex;

@@ -13,6 +13,11 @@
     width: 100% ;
    height: 40px;
 }
+
+.slider-title{
+    font-weight: bold;
+    color: black;
+}
 .contained-all-parts{
     width: 90%;
    height: 100vh;
@@ -252,6 +257,19 @@
 
    } */
 } 
+@media screen and (max-width:468px) {
+    .second-services-swiper-container-mobile-view{
+        display: block;
+    }
+    .second-services-swiper-container{
+        display: none;
+    }
+    .swiper-tablet-view{
+        display: none ;
+    }
+    .service-section{
+    width: 90%;}
+}
 
 @media screen and(max-width:480px){
     .second-services-swiper-container-mobile-view{

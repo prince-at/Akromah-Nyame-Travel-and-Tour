@@ -4,6 +4,7 @@
 import {FaCalendarAlt, FaEnvelope, FaFlag, FaHome, FaPassport, FaPhone, FaPlane, FaPlaneArrival, FaPlaneDeparture, FaUser } from "react-icons/fa";
 import PhoneInput from "react-phone-input-2";
  import emailjs from 'emailjs-com';
+import { motion } from "framer-motion";
  const FlightBookings = () => {
    const [showForm, setShowForm] = useState(true);
    const [submitting,setSubmitting] =useState(false);
@@ -70,7 +71,13 @@ import PhoneInput from "react-phone-input-2";
    };
  
    return (
-    <div className="flight-main-form-container">
+    <motion.div className="flight-main-form-container"
+    key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.3 }}
+    >
           <img src={online} alt="online-bookings" className="online-flight-bookings"/>
         
            <h2 className="education">
@@ -271,7 +278,7 @@ import PhoneInput from "react-phone-input-2";
             </div>
           )}
           </div>
-        </div>
+        </motion.div>
 
    );
  };

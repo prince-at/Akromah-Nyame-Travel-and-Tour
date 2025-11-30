@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import logo from "././images-services/akromah-company-logo.png"; // Adjust the path as needed
 import './Pages/Css/Footer.css'
 import Subscribe from "./Subscribe";
@@ -6,6 +6,7 @@ import Reviews from "./Reviews";
  
 
 const FooterPage = () => {
+  const navigate =useNavigate();
   return (
     <>
     <div className="footer-desktop">
@@ -47,7 +48,7 @@ const FooterPage = () => {
             <a href="https://facebook.com/akromanyame" target="_blank" rel="noopener noreferrer"> <p style={{color:"white"}}>Facebook</p></a>
             <p>TikTok <a href="https://twitter.com/akromanyame" target="_blank" rel="noopener noreferrer"></a></p>
             <p>Instagram <a href="https://instagram.com/akromanyame" target="_blank" rel="noopener noreferrer"></a></p>
-            <span className="footer-account" onClick={() => window.location.href='/login'}> Account</span>
+            <span className="footer-account" onClick={() => navigate('/login')}> Account</span>
             </div>
             <div className="footer-subscribe">
             <h2 className="sub-news">Subscribe to Our Newsletter</h2>
@@ -114,7 +115,7 @@ const FooterPage = () => {
                   <p>Facebook <a href="https://facebook.com/akromanyame" target="_blank" rel="noopener noreferrer"></a></p>
                   <p>TikTok <a href="https://twitter.com/akromanyame" target="_blank" rel="noopener noreferrer"></a></p>
                   <p>Instagram <a href="https://instagram.com/akromanyame" target="_blank" rel="noopener noreferrer"></a></p>
-                  <span className="footer-account" onClick={() => window.location.href='/login'}> Account</span>
+                  <span className="footer-account" onClick={() =>navigate('/login')}> Account</span>
                   </div>
 
               </div>

@@ -2,10 +2,17 @@ import { NavLink } from 'react-router-dom'
 import './Pages/Css/PendingList.css'
 
 import StudyTable from './Tables/StudyTable'
+import { motion } from 'framer-motion'
 
 const PendingStudy = () => {
   return (
-    <div className='pending-listings'>
+    <motion.div className='pending-listings'
+    key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.3 }}
+    >
         <div className='pending-list-item'>
                <div>
         <div className='ta-caption'>
@@ -66,7 +73,7 @@ const PendingStudy = () => {
                 action='Action'
             />
         </div>
-    </div>
+    </motion.div>
   )
 }
 

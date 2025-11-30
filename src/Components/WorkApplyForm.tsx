@@ -8,6 +8,7 @@ import {  useNavigate } from "react-router-dom";
 import { FaGenderless } from "react-icons/fa6";
 import axios from "axios";
 import emailjs from 'emailjs-com';
+import { motion } from "framer-motion";
 
 const WorkApplyForm = () => {
   const navigate = useNavigate();
@@ -127,7 +128,13 @@ const WorkApplyForm = () => {
   };
  
   return (
-    <div className="main-form-container">
+    <motion.div className="main-form-container"
+    key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.3 }}
+    >
       <img src={online} alt="online-bookings" className="online-bookings"/>
     
       <h2 className="education">
@@ -329,7 +336,7 @@ const WorkApplyForm = () => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

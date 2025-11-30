@@ -1,11 +1,19 @@
 
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import "../Components/Pages/Css/PendingList.css"
 import HotelTable from './Tables/HotelTable'
+import { motion } from 'framer-motion';
 
 const PendingListings = () => {
+  const navigate =useNavigate();
  return ( 
-    <div className='pending-listings'>
+    <motion.div className='pending-listings'
+    key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.3 }}
+    >
       <div className='pending-list-item'>
         <div>
           <div className='ta-caption'>
@@ -50,7 +58,7 @@ const PendingListings = () => {
             >
               Hotel
             </NavLink>
-            <div onClick ={()=> (window.location.href='login')}
+            <div onClick ={()=> navigate('login')}
               className= 'log-out'
               
             >
@@ -79,7 +87,7 @@ const PendingListings = () => {
           action='Action' />
         
       </div>
-    </div>
+    </motion.div>
   )
 }
 

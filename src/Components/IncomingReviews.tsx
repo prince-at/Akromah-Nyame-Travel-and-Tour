@@ -13,7 +13,9 @@ import { Navigation, Pagination, Autoplay} from "swiper/modules";
 // import "swiper/css";
 // import "swiper/css/bundle";
 // import "swiper/css/autoplay"; 
-
+import 'swiper/swiper.css';
+import 'swiper/swiper-bundle.css';
+// import 'swiper/modules/autoplay.css';
 const reviews = [
   {
     pic: 'S',
@@ -59,7 +61,7 @@ const IncomingReviews = () => {
     <Swiper 
          modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}
-        slidesPerView={1}
+        slidesPerView={1} 
         navigation={false}
         pagination={{ clickable: true }}
         autoplay={{ delay: 8000 }}

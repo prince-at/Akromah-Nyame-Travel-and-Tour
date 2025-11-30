@@ -585,8 +585,11 @@
     
     
   }
-  .swiper-incoming-review{
-    padding-top: 250px !important;
+  .social-media-logos{
+    margin-top: 50px;
   }
+  /* .swiper-incoming-review{
+    padding-top: 250px !important;
+  } */
   
 }

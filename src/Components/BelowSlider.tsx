@@ -1,8 +1,4 @@
-
-import pic from "../../src/images/WhatsApp Image 2025-06-29 at 3.08.04 PM.jpeg"
-
-
-
+  
 
 const BelowSlider = () => {
   return (

@@ -7,21 +7,26 @@ import FormBanner from "../FormBanner";
 import  serviceImag3 from "../../Components/images-services/close-up-man-holding-ticket.jpg"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import 'swiper/swiper.css';
+import 'swiper/swiper-bundle.css';
 
-// import "swiper/css";
-// import "swiper/css/bundle";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import "swiper/css/scrollbar";
-// import "swiper/css/autoplay"; 
 import { FaBriefcase, FaGraduationCap, FaPassport, FaPlaneDeparture } from "react-icons/fa";
 import ReviewForm from "../ReviewForm";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Services = () => {
+  const navigate =useNavigate()
   return (
-    <div className="services-page-background">
-     
-      <div className="services">
+    <motion.div className="services-page-background"
+    key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.3 }}
+    >
+       
+     <div className="services">
         <img src={serviceImage} alt="service-image" className="service-image" />
         <div className="empowering"> 
           <h1 className="service-text-page"> - SERVICES - </h1>
@@ -42,27 +47,27 @@ const Services = () => {
             <div className="service-title-container">
               
                 <Swiper 
-                  modules={[Navigation, Pagination, Autoplay]}
+                  modules={[Navigation, Pagination, Autoplay]} 
                   spaceBetween={50}
                   slidesPerView={1}
-                  navigation={false}
-                  pagination={{ clickable: true }}
-                  autoplay={{ delay: 8000 }}
+                  navigation={true} 
+                  pagination={{ clickable: true }} 
+                  autoplay={{ delay: 8000 }} 
                   loop={true}
-                  style={{ width: "100%", height: "100%" }}
-                  >
+                  style={{ width: "100%", height: "100%" }} 
+                  > 
               
-              
-                  <SwiperSlide>
+
+                  <SwiperSlide> 
                   <img
                     src={serviceImag3}
                     alt="service-slide-1"
                     className="service-image2"
-                  />
+                  /> 
                    <h1 className="text-on-expertise">
-                Our Expertise: Crafting-results Driven Campaigns for our
-                Traveling Agency.
-              </h1>
+                    Our Expertise: Crafting-results Driven Campaigns for our
+                    Traveling Agency. 
+                  </h1>
                 </SwiperSlide>
 
                 <SwiperSlide>
@@ -285,9 +290,7 @@ const Services = () => {
                 </ul>
                     </div>
                   </div>
-            
-            
-
+                  
               </div>
               </div>
               </div>
@@ -296,11 +299,17 @@ const Services = () => {
             <div className="service-booking-form-row">
               
             <ReviewForm/>
-            <div className="service-row-column">
+            <motion.div className="service-row-column"
+            key={location.pathname}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.3 }}
+            >
               <h1>Get in Touch with us</h1>
-              <button onClick={()=>window.location.href="/book"} className="appoint-book-hover">Book Appointment</button>
-              <button onClick={()=>window.location.href="/contact"} className="appoint-book-hover">Contact us</button>
-            </div>
+              <button onClick={()=>navigate('/book')} className="appoint-book-hover">Book Appointment</button>
+              <button onClick={()=>navigate('/contact')} className="appoint-book-hover">Contact us</button>
+            </motion.div>
           </div> 
           </div>
         </div>
@@ -309,7 +318,7 @@ const Services = () => {
 
       
       
-    </div>
+    </motion.div>
   );
 };
 

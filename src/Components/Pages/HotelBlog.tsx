@@ -3,10 +3,19 @@ import { BlogList } from "../BlogData";
 import MarqueeText2 from "../MarqueeText2";
 import "./Css/WorkAbroad.css";
 import luxuryHotel from "../../assets/luxury_disabled_holiday_accessible_accommodation_all_inclusive_luxurious-4.jpg";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const HotelBlog = () => {
+  const navigate =useNavigate();
   return (
-    <>
+    <motion.div
+    key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.3 }}
+    >
       <div className="blog-page">
         <img
           src={WorkAbroadPicture}
@@ -126,7 +135,7 @@ const HotelBlog = () => {
 
           <button
             className="wbtn-get"
-            onClick={() => (window.location.href = "/contact")}
+            onClick={() => navigate("/contact")}
           >
             Get in Touch with Us{" "}
           </button>
@@ -134,7 +143,7 @@ const HotelBlog = () => {
           <h1 className="global-text">Conclusion</h1>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 

@@ -4,6 +4,7 @@ import online from "../assets/online-booking-traveling-plane-flight-concept.jpg"
 import { FaBriefcase, FaCalendarAlt, FaEnvelope, FaFlag, FaGlobe, FaHome, FaPhone, FaUser } from "react-icons/fa";
 import PhoneInput from "react-phone-input-2";
 import emailjs from 'emailjs-com';
+import { motion } from "framer-motion";
 const DocumentForm = () => {
   const [showForm, setShowForm] = useState(true);
   
@@ -57,7 +58,13 @@ const DocumentForm = () => {
   };
 
   return (
-    <div className="main-document-form-container">
+    <motion.div className="main-document-form-container"
+    key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.3 }}
+    >
       <img src={online} alt="online-bookings" className="online-bookings"/>
       
       <h2 className="education">
@@ -234,7 +241,7 @@ const DocumentForm = () => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

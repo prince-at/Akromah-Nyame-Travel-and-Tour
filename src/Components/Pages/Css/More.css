@@ -1,0 +1,15 @@
+.availability-check-countries-container{
+    height: 100%;
+    width: 100%;
+}
+.related-job-offer{
+    width: 85%;
+    margin-top: 70px;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.related{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}

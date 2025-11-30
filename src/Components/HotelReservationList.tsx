@@ -1,4 +1,4 @@
-import { button, desc } from "framer-motion/client";
+
 import flight from "../../src/images/close-up-man-prepared-traveling.jpg"
 import hotel from "../../src/assets/receptionist-elegant-suit-work-hours-with-customer.jpg"
 import passport from "../../src/assets/After-School-Africa-USA-Visa-Application-Guide.jpg"

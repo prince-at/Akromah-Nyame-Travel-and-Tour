@@ -2,8 +2,10 @@ import { FaArrowRight, FaCheckCircle } from 'react-icons/fa'
 import '../../src/Components/Pages/Css/PassionHome.css'
 import image6 from '../images/image-6.png'
 import interviewsImage from '../images/WhatsApp Image 2025-06-29 at 3.08.04 PM.jpeg'
+import { useNavigate } from 'react-router-dom'
 
 const PassionHome = () => {
+  const navigate = useNavigate();
 
   return (  
     <div className='passion-home-container'>
@@ -31,7 +33,7 @@ const PassionHome = () => {
                              <div className='icon-n-text'><FaCheckCircle style={{ color: '#4caf50', fontSize: '1.5rem', marginRight: '8px' }} />
                                <span className='icon-text'>Trusted Local Guides</span>
                               </div>
-                              <button className='passion-button' onClick={() => (window.location.href = '/about')}>Learn More
+                              <button className='passion-button' onClick={() => navigate( '/about')}>Learn More
                                 <FaArrowRight style={{ marginLeft: '10px', fontSize: '1.1rem', verticalAlign: 'middle' }} />
                               </button>
                         </div>

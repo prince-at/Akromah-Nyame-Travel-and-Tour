@@ -5,6 +5,7 @@ import { FaBed, FaEnvelope, FaFlag, FaGenderless,  FaHome, FaHotel, FaPassport, 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import emailjs from 'emailjs-com';
+import { motion } from "framer-motion";
 
 const HotelReservationForm = () => {
   const [formData, setFormData] = useState({
@@ -122,7 +123,7 @@ const HotelReservationForm = () => {
       });
 };
   return ( 
-    <div className="main-hotel-form-container">
+    <motion.div className="main-hotel-form-container">
        <img src={online} alt="online-bookings" className="online-bookings"/>
           
              <h2 className="education">
@@ -458,7 +459,7 @@ const HotelReservationForm = () => {
           Your hotel reservation is pending approval.
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

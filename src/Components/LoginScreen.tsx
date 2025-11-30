@@ -1,12 +1,21 @@
 import  { useState } from "react";
 import '../Components/Pages/Css/LoginScreen.css';
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 
 const LoginScreen = () => {
+  const navigate =useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="login-screen">
+    <motion.div className="login-screen"
+    
+    key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.3 }}>
       <div className='login-container'>
         <div className='login-form-container'>
           <form className='login-form'>
@@ -59,12 +68,12 @@ const LoginScreen = () => {
             </div>
             <div className='login-button-container'>
               <h1>Admin only</h1>
-              <button type="submit" className='login-button' onClick={() => (window.location.href = '/hotel')}>Login</button>
+              <button type="submit" className='login-button' onClick={() => navigate('/hotel')}>Login</button>
             </div>
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

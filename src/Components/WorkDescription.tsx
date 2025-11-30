@@ -1,19 +1,24 @@
 import "././Pages/Css/WorkDescription.css"
 import desc from "../assets/School-Africa-USA-Visa-Application-Guides.jpg"
+import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion";
 
 
 const WorkDescription = () => {
+    const navigate =useNavigate();
     
   return (
-    <div className="work-description-full-page"> 
-        <div  className="work-description-full-page">
-             
+    <motion.div className="work-description-full-page"> 
+        <div className="work-description-full-page">
+              
             <div className="desc-im"> 
                 <img src={desc} alt="Work Description" className="im-for-desc"/>
+                <div className="work-types-title">
                 <h1 className="work-description-title">WORK TYPE</h1>
                 <p className="hiring">We are recruiting workers for the following hospitality positions to countries
-                        such as: Dubai, Qatar, Germany, Canada, Saudi Arabia, Norway, Italy, Australia, and other part of Europe</p>
-            </div>
+                        such as: Dubai, Qatar, Germany, Canada, Saudi Arabia, Norway, Italy, Australia, Schengen and other part of Europe</p>
+                </div> 
+            </div> 
             <div className="long-line-for-test">
                 <div className="line">
                     <h1 className="list-head">HOSPITALITY POSITIONS:</h1>
@@ -45,8 +50,8 @@ const WorkDescription = () => {
                             <li>Safety Officer / Health & Safety Manager </li>
                         </ul>
                          <div className="applies-container">
-                    <button className="apply-for-work" onClick={()=>window.location.href="/work-form"}>Apply Now</button>
-                    <button className="apply-for-work" onClick={() => (window.location.href = '/contact')}>Contact</button>
+                    <button className="apply-for-work" onClick={()=>navigate("/work-form")}>Apply Now</button>
+                    <button className="apply-for-work" onClick={() => navigate('/contact')}>Contact</button>
                 </div>
                 </div>
                 <div className="line">
@@ -78,8 +83,8 @@ const WorkDescription = () => {
                         <li>Window/Door Installer</li>
                     </ul>
                      <div className="applies-container2">
-                    <button className="apply-for-work" onClick={()=>window.location.href="/work-form"}>Apply Now</button>
-                    <button className="apply-for-work" onClick={() => (window.location.href = '/contact')}>Contact</button>
+                    <button className="apply-for-work" onClick={()=>navigate("/work-form")}>Apply Now</button>
+                    <button className="apply-for-work" onClick={() => navigate('/contact')}>Contact</button>
                 </div>
                 </div>
                 <div className="line">
@@ -109,8 +114,8 @@ const WorkDescription = () => {
                         
                     </ul>
                     <div className="applies-container3">
-                    <button className="apply-for-work" onClick={()=>window.location.href="/work-form"}>Apply Now</button>
-                    <button className="apply-for-work" onClick={() => (window.location.href = '/contact')}>Contact</button>
+                    <button className="apply-for-work" onClick={()=>navigate("/work-form")}>Apply Now</button>
+                    <button className="apply-for-work" onClick={() => navigate('/contact')}>Contact</button>
                 </div>
                 </div>
                 
@@ -119,7 +124,7 @@ const WorkDescription = () => {
            
         </div>
         
-    </div>
+    </motion.div>
   )
 }
 

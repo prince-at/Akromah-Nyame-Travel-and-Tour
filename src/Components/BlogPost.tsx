@@ -1,12 +1,14 @@
 import React from "react";
 import { BlogList } from "./BlogData";
 import "./Pages/BlogPost.css";
+import { useNavigate } from "react-router-dom";
 
 
 
 type Props = {}; 
 
 const BlogPost: React.FC<Props> = () => {
+  const navigate = useNavigate();
    
   return (
     <div className="blog-post-page-container">
@@ -26,9 +28,7 @@ const BlogPost: React.FC<Props> = () => {
                 <h1 className="title-blog">{blog.blogTitle}</h1>
                 <p className="blog-description">{blog.blogDescription}</p>
                 <button className="button-content"
-                onClick={()=>
-                    (window.location.href = blog.route)
-                }>{blog.buttonText}</button>
+                onClick={()=>navigate(blog.route)}>{blog.buttonText}</button>
               </div>
             </div>
           );

@@ -4,10 +4,19 @@ import BlogPicture from "../../assets/Quyen-B.jpg";
 import BlogPost from "../BlogPost";
 
 import MarqueeText2 from "../MarqueeText2";
+import { motion } from "framer-motion";
+
 
 const Blog = () => {
+  
   return (
-    <div className="blog-page-container">
+    <motion.div className="blog-page-container"
+    key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.3 }}
+    >
       <div className="blog-page">
         <img
           src={BlogPicture}
@@ -26,7 +35,7 @@ const Blog = () => {
       <div className="blog-post-main-page">
         <BlogPost />{" "}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

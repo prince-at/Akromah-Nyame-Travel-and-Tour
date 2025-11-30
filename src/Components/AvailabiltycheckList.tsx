@@ -110,7 +110,7 @@ export const AvailabiltyCheckList2 = [
 
        
 ]
-export const AvailabiltyCheckList3 = [
+export const AvailabiltyCheckList3 = [ 
     {
         title: "Request for Available Jobs",
         location: "Location: Japan",
@@ -132,7 +132,7 @@ export const AvailabiltyCheckList3 = [
         location: "Location: South Korea",
         availability: "Availability: Actively Recruiting",
         contact: "Contact: for more info",
-         button: "Contact for South Korea Jobs",
+         button: "Contact for Korea Jobs",
         image: southKoreaJobs,
     },
     {

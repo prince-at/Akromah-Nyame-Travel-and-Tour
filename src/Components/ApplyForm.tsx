@@ -18,6 +18,7 @@ import {
 } from "react-icons/fa";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { motion } from "framer-motion";
 
 
 const ApplyForm = () => {
@@ -126,7 +127,13 @@ const ApplyForm = () => {
   };
 
   return (
-    <div className="main-study-form-container">
+    <motion.div className="main-study-form-container"
+    key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.3 }}
+    >
       <img src={online} alt="online-bookings" className="online-bookings" />
 
       <h2 className="education">APPLY TO STUDY ABROAD.</h2>
@@ -367,7 +374,7 @@ const ApplyForm = () => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

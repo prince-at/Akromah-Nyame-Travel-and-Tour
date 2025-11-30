@@ -181,3 +181,8 @@ ol, ul {
 dl, ol, ul {
     margin-bottom: 0px !important;
 }
+@media screen and (max-width:468px){
+    .visa-guaranteed{
+        width: 90%;
+    }
+}

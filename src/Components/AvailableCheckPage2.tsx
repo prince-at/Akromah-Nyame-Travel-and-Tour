@@ -2,13 +2,21 @@ import './Pages/Css/AvailabilityCheckPage.css'
 import australiaWorkers from '../images/aus-occupation-list-img-02-min-1024x352.jpg' 
 import { AvailabiltyCheckList2 } from './AvailabiltycheckList'
 import MoreJobs from './MoreJobs'
+import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 
 
 const AvailabilityCheckPage = () => {
-  
+  const navigate =useNavigate();
   return (
-    <div > 
+    <motion.div 
+    key={location.pathname}
+     initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.3 }}
+    > 
         <div >
             <div className="availability-check-header">
                 <img src={australiaWorkers} alt="Availability Check" className="availability-check-image-background-cover" />
@@ -20,11 +28,11 @@ const AvailabilityCheckPage = () => {
                         <div className="availability-check-list" key={index}>
                             <img src={item.image} alt="Job" className="availability-check-image" />
                             <div className="availability-check-details">
-                            <li className="availability-check-item-1" onClick={() => window.location.href='/contact'} style={{ cursor: 'pointer' }}>{item.title}</li>
+                            <button className="availability-check-item-1" onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>{item.title}</button>
                             <li className="availability-check-item">{item.location}</li>
                             <li className="availability-check-item">{item.availability}</li>
-                            <li className="availability-check-item" onClick={() => window.location.href='/contact'} style={{ cursor: 'pointer' }}>{item.contact}</li>
-                            <button className="availbility-contact" onClick={()=>window.location.href="/contact"}> {item.button}</button>
+                            <button className="availability-check-item" onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>{item.contact}</button>
+                            <button className="availbility-contact" onClick={()=>navigate("/contact")}> {item.button}</button>
                             </div>
                         </div> 
                     )
@@ -36,7 +44,7 @@ const AvailabilityCheckPage = () => {
 
   
         </div>
-    </div>
+    </motion.div>
   )
 }
 

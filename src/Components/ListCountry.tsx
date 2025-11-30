@@ -3,9 +3,11 @@ import "././Pages/Css/ListCountry.css";
 import { CountriesList, countriesList1, countriesList2 } from "./scene/CountryList";
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const ListCountry = () => {
+  const navigate =useNavigate();
   const [liked, setLiked] = useState<boolean[]>(CountriesList.map(() => false));
 
   const handleLike = (index: number) => {
@@ -39,7 +41,7 @@ const ListCountry = () => {
           <h1 className="opportunity">OUR JOB OFFER</h1>
           <div className="see-more-button-inner">
             <button style={{ fontSize: "1rem" }} className="view-more-works"
-            onClick={() => (window.location.href ='/uae')}>see more</button>
+            onClick={() => navigate('/uae')}>see more</button>
             <FaArrowRight
               className="arrow-icon"
               style={{ fontSize: ".7rem", color: "black", marginLeft: "10px" }}
@@ -59,7 +61,7 @@ const ListCountry = () => {
                       src={country.image}
                       alt={`${country.name} flag`}
                       className="country-images"
-                      onClick={()=>window.location.href="/work-description"}
+                      onClick={()=>navigate("/work-description")}
                     />
                     
                   </div>
@@ -100,10 +102,10 @@ const ListCountry = () => {
                     
                       </div>
                       <div className="span-text-column-only-2">
-                        <span className="work-country" onClick={()=>window.location.href="/work-description"}>{country.name}</span>
+                        <span className="work-country" onClick={()=>navigate("/work-description")}>{country.name}</span>
                          {renderStars((country as any).rating || 4)}
                          <span className="span-title-text" >{country.title}</span>
-                          <span className="process-duration" onClick={()=>window.location.href="/work-description"}>{country.jobs}</span>
+                          <span className="process-duration" onClick={()=>navigate("/work-description")}>{country.jobs}</span>
                       </div>
                     </div>
 
@@ -113,7 +115,7 @@ const ListCountry = () => {
                     <button
                     className="country-button-text"
                       
-                      onClick={() => (window.location.href = country.id)}
+                      onClick={() => navigate(country.id)}
                     >
                       {country.button}
                     </button>
@@ -178,7 +180,7 @@ const ListCountry = () => {
                         <span className="work-country">{country.name}</span>
                          {renderStars((country as any).rating || 4)}
                          <span className="span-title-text">{country.title}</span>
-                          <span className="process-duration" onClick={()=>window.location.href="/work-description"}>{country.jobs}</span>
+                          <span className="process-duration" onClick={()=>navigate("/work-description")}>{country.jobs}</span>
                       </div>
                     </div>
 
@@ -188,7 +190,7 @@ const ListCountry = () => {
                     <button
                     className="country-button-text"
                       
-                      onClick={() => (window.location.href = country.id)}
+                      onClick={() => navigate( country.id)}
                     >
                       {country.button}
                     </button>
@@ -247,7 +249,7 @@ const ListCountry = () => {
                         <span className="work-country">{country.name}</span>
                          {renderStars((country as any).rating || 4)}
                          <span className="span-title-text">{country.title}</span>
-                          <span className="process-duration" onClick={()=>window.location.href="/work-description"}>{country.jobs}</span>
+                          <span className="process-duration" onClick={()=>navigate("/work-description")}>{country.jobs}</span>
                       </div>
                     </div>
 
@@ -257,7 +259,7 @@ const ListCountry = () => {
                     <button
                     className="country-button-text"
                       
-                      onClick={() => (window.location.href = country.id)}
+                      onClick={() => navigate(country.id)}
                     >
                       {country.button}
                     </button>
