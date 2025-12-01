@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -68,5 +68,5 @@
   "bugs": {
     "url": "https://github.com/prince-at/Akroma-Nyame-Consult/issues"
   },
-  "homepage": "https://prince-at/Akroma-Nyame-Consult/tree/main.github.io/react-turt"
+  "homepage": "https://prince-at.github.io/Akroma-Nyame-Consult/"
 }
