@@ -60,13 +60,13 @@
   "main": "eslint.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/prince-at/Akroma-Nyame-Consult.git"
+    "url": "git+https://github.com/prince-at/Akromah-Nyame-Travel-and-Tour.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/prince-at/Akroma-Nyame-Consult/issues"
+    "url": "https://github.com/prince-at/Akromah-Nyame-Travel-and-Tour/issues"
   },
   "homepage": "https://prince-at.github.io/Akromah-Nyame-Travel-and-Tour/"
 }
