@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom";
+
 import globe from "../../images/image-6.png";
 import "../About-Us/About.css";
 
 const VisionStatement = () => {
-  const navigate =useNavigate();
+  
   return ( 
     <div className="who-are-we">
       <div className="vision-background">
@@ -18,7 +18,7 @@ const VisionStatement = () => {
         </p>
         <div>
           {" "}
-          <button className="vision-statement-button" onClick={() =>navigate('/contact')}>Contact Us</button>
+          <button className="vision-statement-button" onClick={() =>window.location.href='/contact'}>Contact Us</button>
         </div>
       </div>
       <div className="imag-can">

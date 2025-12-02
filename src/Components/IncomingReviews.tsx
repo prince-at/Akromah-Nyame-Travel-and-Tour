@@ -55,7 +55,7 @@ const IncomingReviews = () => {
     <>
  
 
-  <div className='swiper-incoming-review' style={{ height: "100%",width: "90%", margin: "100px", justifyContent: "center", alignItems: "center", paddingTop: '50px' }}>
+  <div className='swiper-incoming-review' style={{ height: "100%",width: "90%", justifyContent: "center", alignItems: "center" }}>
       <div style={{justifyContent:'center', alignItems:'center'}}>
     <h1 className='Incoming'>Incoming Reviews</h1></div>
     <Swiper 

@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+
 import student from "../assets/Ben-Headers-7.png.jpg";
 import "././Pages/Css/Studying.css";
 import { StudyingData, StudyingDataTablet, StudyingDataTablet1 } from "./StudyList";
@@ -6,7 +6,7 @@ import { StudyingData2, StudyingDataTablet3 } from "./StudyLIst2";
 import { motion } from "framer-motion";
 
 const ApplyStudyAbroad = () => { 
-  const navigate =useNavigate();
+  
   return ( 
     <motion.div  className="study-outside-main-cover"
     key={location.pathname}
@@ -21,7 +21,7 @@ const ApplyStudyAbroad = () => {
           <h1 className="work-description-title-2">
             WHERE DO YOU WANT TO FURTHER YOUR EDUCATION?
           </h1>
-          <button className='studies-button-only' onClick={()=>navigate("/contact")}>Contact us </button>
+          <button className='studies-button-only' onClick={()=>window.location.href="/contact"}>Contact us </button>
           {/* <p className="hiring">
             we help students like you turn their dreams of studying abroad into
             reality. Whether you’re aiming for world-class universities,
@@ -57,8 +57,8 @@ const ApplyStudyAbroad = () => {
                   {/* <div className='canada-flag-container'>
                     <img src={study.image} alt='canada' className='canada-flag'/></div> */}
                   <div className="applies-container4">
-                    <button className="apply-for-work1" onClick={()=>navigate("/form-1")}>{study.text2}</button>
-                    <button className="apply-for-work2"onClick={()=>navigate("/contact")}>{study.text3}</button>
+                    <button className="apply-for-work1" onClick={()=>window.location.href="/form-1"}>{study.text2}</button>
+                    <button className="apply-for-work2"onClick={()=>window.location.href="/contact"}>{study.text3}</button>
                   </div>
 
                   <p className="hey">{study.text}</p>
@@ -128,8 +128,8 @@ const ApplyStudyAbroad = () => {
                   {/* <div className='canada-flag-container'>
                     <img src={study.image} alt='canada' className='canada-flag'/></div> */}
                   <div className="applies-container4">
-                    <button className="apply-for-work1" onClick={()=>navigate("/form-1")}>{study.text2}</button>
-                    <button className="apply-for-work2"onClick={()=>navigate("/contact")}>{study.text3}</button>
+                    <button className="apply-for-work1" onClick={()=>window.location.href="/form-1"}>{study.text2}</button>
+                    <button className="apply-for-work2"onClick={()=>window.location.href="/contact"}>{study.text3}</button>
                   </div>
 
                   <p className="hey">{study.text}</p>
@@ -163,8 +163,8 @@ const ApplyStudyAbroad = () => {
                   {/* <div className='canada-flag-container'>
                     <img src={study.image} alt='canada' className='canada-flag'/></div> */}
                   <div className="applies-container4">
-                    <button className="apply-for-work1" onClick={()=>navigate("/form-1")}>{study.text2}</button>
-                    <button className="apply-for-work2"onClick={()=>navigate("/contact")}>{study.text3}</button>
+                    <button className="apply-for-work1" onClick={()=>window.location.href="/form-1"}>{study.text2}</button>
+                    <button className="apply-for-work2"onClick={()=>window.location.href="/contact"}>{study.text3}</button>
                   </div>
 
                   <p className="hey">{study.text}</p>
@@ -198,8 +198,8 @@ const ApplyStudyAbroad = () => {
                   {/* <div className='canada-flag-container'>
                     <img src={study.image} alt='canada' className='canada-flag'/></div> */}
                   <div className="applies-container4">
-                    <button className="apply-for-work1" onClick={()=>navigate("/form-1")}>{study.text2}</button>
-                    <button className="apply-for-work2"onClick={()=>navigate("/contact")}>{study.text3}</button>
+                    <button className="apply-for-work1" onClick={()=>window.location.href="/form-1"}>{study.text2}</button>
+                    <button className="apply-for-work2"onClick={()=>window.location.href="/contact"}>{study.text3}</button>
                   </div>
 
                   <p className="hey">{study.text}</p>

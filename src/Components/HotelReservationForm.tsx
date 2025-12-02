@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Pages/Css/ApplyForm.css';
 import online from "../assets/online-booking-traveling-plane-flight-concept.jpg"
-import { FaBed, FaEnvelope, FaFlag, FaGenderless,  FaHome, FaHotel, FaPassport, FaPhone, FaPlane, FaPlaneArrival, FaPlaneDeparture, FaUser } from "react-icons/fa";
+
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import emailjs from 'emailjs-com';
@@ -124,11 +124,12 @@ const HotelReservationForm = () => {
 };
   return ( 
     <motion.div className="main-hotel-form-container">
+      <div className="online-booking-hotel-container">
        <img src={online} alt="online-bookings" className="online-bookings"/>
           
              <h2 className="education">
                     APPLY FOR HOTEL RESERVATION
-                  </h2>
+                  </h2></div>
       {/* <button onClick={() => setShowForm(true)} className="apply-now">
         Apply for Hotel Reservation
       </button> */}
@@ -157,9 +158,9 @@ const HotelReservationForm = () => {
             </span> */}
             
             <form onSubmit={handleSubmit}>
-              <h1 className="label-text">Full Name </h1>
-              <div className="input-group">
-                <FaUser className="input-icon" />
+              <label className="block text-gray-700 mb-2" htmlFor="name">Full Name </label>
+              <div>
+                
               <input
                 type="text"
                 name="fullName"
@@ -167,31 +168,29 @@ const HotelReservationForm = () => {
                 required
                 value={formData.fullName}
                 onChange={handleChange}
-                style={{ height: "40px", borderRadius: '5px' }} 
-                className="text-input-field"
+                className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
               /></div>
-              <h1 className="label-text">Gender </h1>
-                 <div className="input-group">
-                  <FaGenderless className="input-icon" />
+              <label className="block text-gray-700 mb-2 mt-2" htmlFor="gender">Gender </label>
+                 <div >
+                  
               <select
                 name="gender"
                 required
-                className="country-select"
+                className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                 value={formData.gender}
                 onChange={handleChange}
-                style={{ height: "40px", borderRadius: '5px' }}
+               
               >
                 <option value="">Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
               </div>
-              <h1 className="label-text">Nationality </h1>
-              <div className="input-group">
-                <FaFlag className="input-icon" />
+              <label className="block text-gray-700 mb-2 mt-2" htmlFor="nationality">Nationality </label>
+              <div >
+              
               <input
-                style={{ height: "40px", borderRadius: '5px' }}
-                className="text-input-field"
+                className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                 type="text"
                 name="nationality"
                 placeholder="Nationality"
@@ -200,12 +199,11 @@ const HotelReservationForm = () => {
                 onChange={handleChange}
               />
               </div>
-              <h1 className="label-text">Email </h1>
-              <div className="input-group phone-input-wrapper">
-                  <FaEnvelope className="input-icon" />
+              <label className="block text-gray-700 mb-2 mt-2" htmlFor="email">Email </label>
+              <div >
+                  
               <input
-                style={{ height: "40px", borderRadius: '5px' }}
-                className="text-input-field"
+                className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -213,9 +211,9 @@ const HotelReservationForm = () => {
                 value={formData.email}
                 onChange={handleChange}
               /></div>
-              <h1 className="label-text">Phone Number </h1>
-              <div className="input-group phone-input-wrapper"> 
-                <FaPhone className="input-icon" />
+              <label className="block text-gray-700 mb-3 mt-3" htmlFor="number">Phone Number </label>
+              <div > 
+                
               <PhoneInput
                country={"us"}
               placeholder={"Enter phone number"}
@@ -238,9 +236,9 @@ const HotelReservationForm = () => {
                 
               />
               </div>
-              <h1 className="label-text">Emergency Phone Number </h1>
-                <div className="input-group phone-input-wrapper"> 
-                <FaPhone className="input-icon" />
+              <label className="block text-gray-700 mb-3 mt-3" htmlFor="number">Emergency Phone Number </label>
+                <div > 
+              
               <PhoneInput
                country={"us"}
               placeholder={"Emergency phone number"}
@@ -264,16 +262,16 @@ const HotelReservationForm = () => {
               />
               </div>
 
-              <h1 className="label-text">Smoking Allergies</h1>
-              <div className="input-group">
-                <FaFlag className="input-icon" />
+              <label className="block text-gray-700 mb-2 mt-3" htmlFor="smoke">Smoking Allergies</label>
+              <div >
+                
               <select
                 name="smokingAllergies"
                 required
-                className="country-select"
+                className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                 value={formData.smokingAllergies}
                 onChange={handleChange}
-                 style={{ height: "40px", borderRadius: '5px' }}
+                 
               >
                 <option value="">Smoking Allergies </option>
                 <option value="Yes">Yes</option>
@@ -281,9 +279,9 @@ const HotelReservationForm = () => {
                 <option value="No">No</option>
               </select>
               </div>
-              <h1 className="label-text">Current Address </h1>
-              <div className="input-group">
-                 <FaHome className="input-icon" />
+              <label className="block text-gray-700 mb-2 mt-2" htmlFor="number">Current Address </label>
+              <div>
+                 
               <input
                 type="text"
                 name="currentAddress"
@@ -291,14 +289,13 @@ const HotelReservationForm = () => {
                 required
                 value={formData.currentAddress}
                 onChange={handleChange}
-                style={{ height: "40px", borderRadius: '5px' }}
-                className="text-input-field"
+                className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
               />
               </div>
-              <h1 className="label-text">Passport Number</h1>
+              <label className="block text-gray-700 mb-2 mt-2" htmlFor="number">Passport Number</label>
               {/* <h1 className="certificate">Travelling Details</h1> */}
-              <div className="input-group">
-                <FaPassport className="input-icon" />
+              <div >
+               
               <input
                 type="text"
                 name="passportNumber"
@@ -306,13 +303,12 @@ const HotelReservationForm = () => {
                 required
                 value={formData.passportNumber}
                 onChange={handleChange}
-                 style={{ height: "40px", borderRadius: '5px' }}
-                className="text-input-field"
+                 className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
               />
               </div>
-              <h1 className="label-text">Destination Country & City </h1>
-              <div className="input-group">
-                 <FaPlane className="input-icon" />
+              <label className="block text-gray-700 mb-2 mt-2" htmlFor="country">Destination Country & City </label>
+              <div>
+                 
               <input
                 type="text"
                 name="destination"
@@ -320,15 +316,14 @@ const HotelReservationForm = () => {
                 required
                 value={formData.destination}
                 onChange={handleChange}
-                style={{ height: "40px", borderRadius: '5px' }}
-                className="text-input-field"
+                className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
               />
               </div>
-              <h1 className="check-ins">Check-in Date</h1>
-              <div className="input-group">
+              <label className="block text-gray-700 mb-2 mt-2" htmlFor="date">Check-in Date</label>
+              <div >
                 
-                <FaPlaneArrival className="input-icon" />
-           
+                
+            
                 
                 <input
                   type="date"
@@ -336,15 +331,14 @@ const HotelReservationForm = () => {
                   required
                   value={formData.checkInDate}
                   onChange={handleChange}
-                  style={{ height: "40px", borderRadius: '5px' }}
-                  className="text-input-field"
+                  className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                 />
               
               </div>
-               <h1 className="check-ins">Check-out Date</h1>
-              <div className="input-group">
+               <label className="block text-gray-700 mb-2 mt-2" htmlFor="date">Check-out Date</label>
+              <div >
                
-                <FaPlaneDeparture className="input-icon" />
+                
              
                 
                 <input
@@ -353,22 +347,21 @@ const HotelReservationForm = () => {
                   required
                   value={formData.checkOutDate}
                   onChange={handleChange}
-                  style={{ height: "40px", borderRadius: '5px' }}
-                  className="text-input-field"
+                  className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                 />
               
               </div>
-              <h1 className="label-text">Room Type </h1>
+              <label className="block text-gray-700 mb-2 mt-2" htmlFor="name">Room Type </label>
 
-              <div className="input-group">
-                <FaHotel className="input-icon" />
+              <div>
+                
               <select
                 name="roomType"
                 required
-                className="country-select"
+                className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                 value={formData.roomType}
                 onChange={handleChange}
-                style={{ height: "40px", borderRadius: '5px' }}
+                
                 
               >
                 <option value="">Room type</option>
@@ -387,20 +380,19 @@ const HotelReservationForm = () => {
                   placeholder="Enter Room type"
                   value={formData.otherRoom}
                   onChange={handleChange}
-                  style={{ height: "40px", borderRadius: '5px' }}
-                  className="text-input-field"
+                className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                 />
               )}
-              <h1 className="label-text">Bed Preference</h1>
-              <div  className="input-group">
-                <FaBed className="input-icon" />
+              <label className="block text-gray-700 mb-2 mt-2" htmlFor="name">Bed Preference</label>
+              <div >
+                
               <select
                 name="bedPreference"
                 required
-                className="country-select"
+                className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                 value={formData.bedPreference}
                 onChange={handleChange}
-                  style={{ height: "40px", borderRadius: '5px' }}
+                
               >
                 <option value="">Bed preference</option>
                 <option value="King size">King size</option>
@@ -409,18 +401,18 @@ const HotelReservationForm = () => {
                 <option value="Normal">Normal</option>
               </select>
               </div>
-              <h1 className="check-ins">
+              <label className="block text-gray-700 mb-2 mt-2" htmlFor="name">
                 Do you have a specific Hotel you want?
-              </h1>
-              <div  className="input-group">
-                <FaHotel className="input-icon" />
+              </label>
+              <div >
+                
               <select
                 name="specificHotel"
                 required
-                className="country-select"
+                className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                 value={formData.specificHotel}
                 onChange={handleChange}
-                style={{ height: "40px", borderRadius: '5px' }}
+                
               >
                 <option value="">Hotel Preferences</option>
                 <option value="Yes">Yes</option>
@@ -435,10 +427,11 @@ const HotelReservationForm = () => {
                   placeholder="Enter Hotel Name & Address"
                   value={formData.otherSpecificHotel}
                   onChange={handleChange}
+                  className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                 />
               )}
              
-              <button type="submit" disabled={submitting}>
+              <button type="submit" disabled={submitting} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 mt-4 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-blue-400">
                 {submitting? 'submitting..':'submit'}
               </button>
             </form>

@@ -2,11 +2,11 @@ import { AvailabiltyCheckList } from "./AvailabiltycheckList";
 import "./Pages/Css/AvailabilityCheckPage.css";
 import uaeWorkers from "../images/petrofac-uae-jobs-1700x397.webp";
 import MoreJobs from "./MoreJobs";
-import { useNavigate } from "react-router-dom";
+
 import { motion } from "framer-motion";
 
 const Uae = () => { 
-  const navigate =useNavigate();
+
   return (
     <motion.div className="availability-check-main-container"
      key={location.pathname}
@@ -38,7 +38,7 @@ const Uae = () => {
                 <div className="availability-check-details">
                   <button
                     className="availability-check-item-1"
-                    onClick={() => navigate("/contact")}
+                    onClick={() => window.location.href="/contact"}
                     style={{ cursor: "pointer" }}
                   >
                     {item.title}
@@ -47,15 +47,15 @@ const Uae = () => {
                   <li className="availability-check-item">
                     {item.availability}
                   </li>
-                  <button
+                  {/* <button
                     className="availability-check-item"
-                    onClick={() => navigate("/contact")}
+                    onClick={() => window.location.href="/contact"}
                     style={{ cursor: "pointer" }}
                   >
                     {item.contact}
-                  </button>
+                  </button> */}
                   <button className="availbility-contact"
-                  onClick={()=>navigate('/contact')}
+                  onClick={()=>window.location.href='/contact'}
                   >
                     {" "}
                     {item.button}
@@ -65,7 +65,7 @@ const Uae = () => {
             );
           })}
         </div>
-        <div>
+        <div className='place-center'>
         <MoreJobs />
         </div>
       </div>

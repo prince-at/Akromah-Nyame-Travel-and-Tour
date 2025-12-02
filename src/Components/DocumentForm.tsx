@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Pages/Css/ApplyForm.css'; // Adjust the path as necessary
 import online from "../assets/online-booking-traveling-plane-flight-concept.jpg"
-import { FaBriefcase, FaCalendarAlt, FaEnvelope, FaFlag, FaGlobe, FaHome, FaPhone, FaUser } from "react-icons/fa";
+
 import PhoneInput from "react-phone-input-2";
 import emailjs from 'emailjs-com';
 import { motion } from "framer-motion";
@@ -65,11 +65,12 @@ const DocumentForm = () => {
     exit={{ opacity: 0, x: -100 }}
     transition={{ duration: 0.3 }}
     >
+      <div className="online-booking-study-container">
       <img src={online} alt="online-bookings" className="online-bookings"/>
       
       <h2 className="education">
         APPLY FOR YOUR TRAVELLING DOCUMENTS.
-      </h2>
+      </h2></div>
       <div className="form-wrapper">
         {showForm && (
           <div> 
@@ -84,41 +85,40 @@ const DocumentForm = () => {
             >
               <form onSubmit={handleSubmit}>
                 {/* Full Name */}
-                <h1 className="label-text">Full Name </h1>
-                <div className="input-group">
-                  <FaUser className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="name">Full Name </label>
+                <div >
+                 
                   <input type="text" placeholder="Full Name" required
-                    style={{ height: "40px", borderRadius: '5px' }} 
-                    className="text-input-field"
+                    className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                     value={formData.fullName}
                     onChange={(e) => updateField("fullName", e.target.value)}
                   />
                 </div>
 
                 {/* Date of Birth */}
-                <h1 className="label-text">Date of Birth </h1>
-                <div className="input-group">
-                  <FaCalendarAlt className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="date">Date of Birth </label>
+                <div>
+           
                   <input
-                    style={{ height: "40px", borderRadius: '5px' }}
+                    
                     type="date"
                     placeholder="Date of Birth"
                     required
                     value={formData.dob}
                     onChange={(e) => updateField("dob", e.target.value)}
-                    className="text-input-field"
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
                 {/* Gender */}
-                <h1 className="label-text">Gender </h1>
-                <div className="input-group">
-                  <FaCalendarAlt className="input-icon" />
+                <label className="block text-gray-700 mb-2 mt-2" htmlFor="gender">Gender </label>
+                <div >
+                  
                   <select
-                    style={{ height: "40px", borderRadius: '5px' }}
+                    
                     name="gender"
                     required
-                    className="text-input-field"
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                     value={formData.gender}
                     onChange={(e) => updateField("gender", e.target.value)}
                   >
@@ -130,33 +130,33 @@ const DocumentForm = () => {
                 </div>
 
                 {/* Email */}
-                <h1 className="label-text">Email </h1>
-                <div className="input-group">
-                  <FaEnvelope className="input-icon" />
+                <label className="block text-gray-700 mb-2 mt-2" htmlFor="email">Email </label>
+                <div >
+                  
                   <input type="email" placeholder="Email" required
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field"
+                  
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                     value={formData.email}
                     onChange={(e) => updateField("email", e.target.value)}
                   />
                 </div>
 
                 {/* Nationality */}
-                <h1 className="label-text">Nationality </h1>
-                <div className="input-group phone-input-wrapper">
-                  <FaFlag className="input-icon" />
+                <label className="block text-gray-700 mt-2 mb-2" htmlFor="nationality">Nationality </label>
+                <div >
+                  
                   <input type="text" placeholder="Nationality" required 
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field"
+                    
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                     value={formData.nationality}
                     onChange={(e) => updateField("nationality", e.target.value)}
                   />
                 </div>
 
                 {/* Contact Number */}
-                <h1 className="label-text">Contact Number </h1>
-                <div className="input-group phone-input-wrapper">
-                  <FaPhone className="input-icon" />
+                <label className="block text-gray-700 mt-3 mb-3" htmlFor="number">Contact Number </label>
+                <div >
+                  
                   <PhoneInput
                     country={"us"}
                     placeholder={"Enter phone number"}
@@ -174,9 +174,9 @@ const DocumentForm = () => {
                 </div>
 
                 {/* Emergency Number */}
-                <h1 className="label-text">Emergency Contact Number </h1>
-                <div className="input-group phone-input-wrapper">
-                  <FaPhone className="input-icon" />
+                <label className="block text-gray-700 mt-3 mb-3" htmlFor="number">Emergency Contact Number </label>
+                <div >
+                  
                   <PhoneInput
                     country={"us"}
                     placeholder={"Emergency Contact Number"}
@@ -194,33 +194,34 @@ const DocumentForm = () => {
                 </div>
 
                 {/* Address */}
-                <h1 className="label-text">Current Address </h1>
-                <div className="input-group">
-                  <FaHome className="input-icon" />
+                <label className="block text-gray-700 mt-3 mb-2" htmlFor="address">Current Address </label>
+                <div >
+                  
                   <input type="text" placeholder="Current Address" required 
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field"
+                    
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                     value={formData.address}
                     onChange={(e) => updateField("address", e.target.value)}
                   />
                 </div>
 
                 {/* Country */}
-                <h1 className="label-text">Destination(s) </h1>
-                <div className="input-group">
-                  <FaGlobe className="input-icon" />
+                <label className="block text-gray-700 mb-2 mt-2" htmlFor="destination">Destination(s) </label>
+                <div >
+                  
                   <input required type="text" placeholder="Destination" 
-                    style={{ height: "40px", borderRadius: '5px' }}
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                     value={formData.destination}
                     onChange={(e) => updateField("destination", e.target.value)}
                   />
                 </div>
 
                 {/* Document Type */}
-                <h1 className="label-text">Document Applying for </h1>
-                <div className="input-group">
-                  <FaBriefcase className="input-icon" />
-                  <select required style={{ height: "40px", borderRadius: '5px' }}
+                <label className="block text-gray-700 mb-2 mt-2" htmlFor="name">Document Applying for </label>
+                <div>
+                 
+                  <select required 
+                   className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                     value={formData.documentType}
                     onChange={(e) => updateField("documentType", e.target.value)}
                   >
@@ -235,7 +236,7 @@ const DocumentForm = () => {
                   </select>
                 </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 mt-4 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-blue-400">Submit</button>
               </form>
             </div>
           </div>

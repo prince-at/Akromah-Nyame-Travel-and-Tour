@@ -32,14 +32,39 @@
   animation: slide-in 0.3s ease;
 }
 .form-wrapper{
-  width: 40%;
-  height: 70%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  
+  box-shadow: 0 2px 10px rgba(111, 226, 255, 0.459);
+
   margin-top: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
   
  
 }
 
+.online-booking-container{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.online-booking-flight-container{
+   width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.online-booking-study-container{
+   width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @keyframes slide-in {
   from {
     transform: translateY(-30px);
@@ -60,7 +85,7 @@
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
-  font-size: 1rem;
+  /* font-size: 1rem; */
     border: 1px solid #ccc;
     /* border-radius: 5px; */
 }
@@ -115,46 +140,58 @@ width: 100%;
 }
 .main-form-container{
   width: 100%;
-  height: 190vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-top: 68px;
+  overflow-x: hidden;
   /* border-radius: 10px; */
 }
 .flight-main-form-container{
   width: 100%;
-  height: 220vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-top: 68px;
+  overflow-x: hidden;
 }
 .submit{
   margin-top: 20px;
 }
 .main-hotel-form-container{
     width: 100%;
-    height: 300vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow-x: hidden;
     
 }
 .label-text{
   font-weight: 300;
 }
+
+.online-booking-hotel-container{
+   width: 100%;
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .main-document-form-container{
     width: 100%;
-    height: 210vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-top: 38px;
+    overflow-x: hidden;
 }
 .main-study-form-container{
    width: 100%;
@@ -165,6 +202,7 @@ width: 100%;
   flex-direction: column;
   margin-top: 38px;
   margin-bottom: 50px;
+  overflow-x: hidden;
 }
 .online-bookings{
   width: 100%;
@@ -208,7 +246,7 @@ width: 100%;
   transition: all 0.3s ease;
   border-width: 0px 0px 1px 0px;
   color: #3f3f3f;
-  font-size: 14px;
+  /* font-size: 14px; */
 }
 
 /* Highlighted input when focused */
@@ -219,13 +257,13 @@ width: 100%;
   box-shadow: 0 0 5px rgba(76, 102, 175, 0.5); /* glowing effect */
   background-color: #f9fff9; /* light background */
 }
-.input-group {
+/* .input-group {
   position: relative;
   display: flex;
   
   margin: 10px 0;
   height: 44px;
-}
+} */
 
 .input-group input,
 .input-group select {
@@ -272,7 +310,8 @@ width: 100%;
 
 .phone-input {
   width: 100% !important;
-  height: 100% !important;
+  padding-top: 1.7rem !important;
+  padding-bottom: 1.7rem !important;
   padding: 10px;
   font-size: 14px;
 }
@@ -325,7 +364,7 @@ width: 100%;
 }
 .education{
   position: absolute;
-  top: 30% !important;
+  top: 60% !important;
 }
 }
 
@@ -346,5 +385,25 @@ width: 100%;
   display: flex;
   justify-content: center;
   align-items:center ;
+}
+}
+
+@media screen and (max-width: 480px){
+  .online-booking-flight-container{
+  width: 100%;
+
+  margin-top: 15px;
+  
+ 
+  }
+  .online-flight-bookings{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  position: relative;
+}
+.education{
+  font-size: 18px;
+  text-align: center;
 }
 }

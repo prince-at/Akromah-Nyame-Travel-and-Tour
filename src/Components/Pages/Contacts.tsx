@@ -15,7 +15,7 @@ const Contacts = () => {
       <div className="contacts">
         <img src={contact} alt="Contact" className="contact-background-image" />
         <div>
-          <h1 className="contact-header">Contact Us</h1>
+          <h1 className="contact-header">For Jobs and University Admissions Abroad, <br/>Contact Us</h1>
         </div>
       </div>
       <div> 

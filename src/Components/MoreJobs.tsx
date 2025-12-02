@@ -2,14 +2,14 @@ import  { useState } from 'react'
 import ReviewForm from './ReviewForm';
 import { FaHeart, FaRegHeart, FaStar } from 'react-icons/fa';
 import { CountriesList, countriesList1Divided, countriesList1Divided1, countriesList2Divided, countriesList2Divided2, countriesListDivided, countriesListDivided1 } from './scene/CountryList';
-import { useNavigate } from 'react-router-dom';
+
 import '././Pages/Css/More.css'
 import { motion } from 'framer-motion';
 
 
 
 const MoreJobs = () => {
-const navigate =useNavigate();
+
 
   const [liked, setLiked] = useState<boolean[]>(CountriesList.map(() => false));
 
@@ -37,6 +37,7 @@ const navigate =useNavigate();
 
 
   return (
+
     <motion.div 
     key={location.pathname}
     initial={{ opacity: 0, x: 100 }}
@@ -52,7 +53,7 @@ const navigate =useNavigate();
                 
               <div className="working-department">
             
-                        <div> 
+                        <div className='place-center'> 
                           {countriesListDivided1.map((country, index) => {
                             return (
                               
@@ -105,7 +106,7 @@ const navigate =useNavigate();
                                       <span className="work-country">{country.name}</span>
                                        {renderStars((country as any).rating || 4)}
                                        <span className="span-title-text">{country.title}</span>
-                                        <span className="process-duration" onClick={()=>navigate("/work-description")}>{country.jobs}</span>
+                                        <span className="process-duration" onClick={()=>window.location.href="/work-description"}>{country.jobs}</span>
                                     </div>
                                   </div>
               
@@ -115,7 +116,7 @@ const navigate =useNavigate();
                                   <button
                                   className="country-button-text"
                                     
-                                    onClick={() => navigate('/uae')}
+                                    onClick={() => window.location.href='/uae'}
                                   >
                                     {country.button}
                                   </button>
@@ -125,7 +126,7 @@ const navigate =useNavigate();
                             ); 
                           })}
                           </div>
-                           <div > 
+                           <div className='place-center' > 
                           {countriesListDivided.map((country, index) => {
                             return (
                               
@@ -178,7 +179,7 @@ const navigate =useNavigate();
                                       <span className="work-country">{country.name}</span>
                                        {renderStars((country as any).rating || 4)}
                                        <span className="span-title-text">{country.title}</span>
-                                        <span className="process-duration" onClick={()=>navigate("/work-description")}>{country.jobs}</span>
+                                        <span className="process-duration" onClick={()=>window.location.href="/work-description"}>{country.jobs}</span>
                                     </div>
                                   </div>
               
@@ -188,7 +189,7 @@ const navigate =useNavigate();
                                   <button
                                   className="country-button-text"
                                     
-                                    onClick={() => navigate('/australia')}
+                                    onClick={() => window.location.href='/australia'}
                                   >
                                     {country.button}
                                   </button>
@@ -201,7 +202,7 @@ const navigate =useNavigate();
                         </div> 
               
                         <div className="working-department">
-                        <div> 
+                        <div className='place-center'> 
                           {countriesList1Divided1.map((country, index) => {
                             return (
                               
@@ -254,7 +255,7 @@ const navigate =useNavigate();
                                       <span className="work-country">{country.name}</span>
                                        {renderStars((country as any).rating || 4)}
                                        <span className="span-title-text">{country.title}</span>
-                                        <span className="process-duration" onClick={()=>navigate("/work-description")}>{country.jobs}</span>
+                                        <span className="process-duration" onClick={()=>window.location.href="/work-description"}>{country.jobs}</span>
                                     </div>
                                   </div>
               
@@ -264,7 +265,7 @@ const navigate =useNavigate();
                                   <button
                                   className="country-button-text"
                                     
-                                    onClick={() => navigate('/asia')}
+                                    onClick={() => window.location.href='/asia'}
                                   >
                                     {country.button}
                                   </button>
@@ -274,7 +275,7 @@ const navigate =useNavigate();
                             ); 
                           })}
                           </div>
-                           <div > 
+                           <div className='place-center' > 
                           {countriesList1Divided.map((country, index) => {
                             return (
                               
@@ -327,7 +328,7 @@ const navigate =useNavigate();
                                       <span className="work-country">{country.name}</span>
                                        {renderStars((country as any).rating || 4)}
                                        <span className="span-title-text">{country.title}</span>
-                                        <span className="process-duration" onClick={()=>navigate("/work-description")}>{country.jobs}</span>
+                                        <span className="process-duration" onClick={()=>window.location.href="/work-description"}>{country.jobs}</span>
                                     </div>
                                   </div>
               
@@ -337,7 +338,7 @@ const navigate =useNavigate();
                                   <button
                                   className="country-button-text"
                                     
-                                    onClick={() => navigate('/europe')}
+                                    onClick={() => window.location.href='/europe'}
                                   >
                                     {country.button}
                                   </button>
@@ -350,7 +351,7 @@ const navigate =useNavigate();
                         </div> 
               
                         <div className="working-department"> 
-                          <div>
+                          <div className='place-center'>
                           {countriesList2Divided2.map((country, index) => {
                             return (
                               
@@ -403,7 +404,7 @@ const navigate =useNavigate();
                                       <span className="work-country">{country.name}</span>
                                        {renderStars((country as any).rating || 4)}
                                        <span className="span-title-text">{country.title}</span>
-                                        <span className="process-duration" onClick={()=>navigate("/work-description")}>{country.jobs}</span>
+                                        <span className="process-duration" onClick={()=>window.location.href="/work-description"}>{country.jobs}</span>
                                     </div>
                                   </div>
               
@@ -413,7 +414,7 @@ const navigate =useNavigate();
                                   <button
                                   className="country-button-text"
                                     
-                                    onClick={() => navigate('/europe')}
+                                    onClick={() => window.location.href='/europe'}
                                   >
                                     {country.button}
                                   </button>
@@ -422,7 +423,7 @@ const navigate =useNavigate();
                              
                             ); 
                           })}</div>
-                           <div>
+                           <div className='place-center'>
                           {countriesList2Divided.map((country, index) => {
                             return (
                               
@@ -475,7 +476,7 @@ const navigate =useNavigate();
                                       <span className="work-country">{country.name}</span>
                                        {renderStars((country as any).rating || 4)}
                                        <span className="span-title-text">{country.title}</span>
-                                        <span className="process-duration" onClick={()=>navigate("/work-description")}>{country.jobs}</span>
+                                        <span className="process-duration" onClick={()=>window.location.href="/work-description"}>{country.jobs}</span>
                                     </div>
                                   </div>
               
@@ -485,7 +486,7 @@ const navigate =useNavigate();
                                   <button
                                   className="country-button-text"
                                     
-                                    onClick={() => navigate('/europe')}
+                                    onClick={() => window.location.href='/europe'}
                                   >
                                     {country.button}
                                   </button>
@@ -496,7 +497,7 @@ const navigate =useNavigate();
                           })}</div>
                           
                         </div>
-           
+                          
            <div className="availability-check-countries">
             <ReviewForm/>
             
@@ -505,7 +506,9 @@ const navigate =useNavigate();
            </div>
            
            </div>
+
     </motion.div>
+   
   )
 }
 

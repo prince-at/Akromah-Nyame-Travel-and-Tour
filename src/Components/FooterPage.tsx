@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import logo from "././images-services/akromah-company-logo.png"; // Adjust the path as needed
 import './Pages/Css/Footer.css'
 import Subscribe from "./Subscribe";
@@ -6,7 +6,7 @@ import Reviews from "./Reviews";
  
 
 const FooterPage = () => {
-  const navigate =useNavigate();
+ 
   return (
     <>
     <div className="footer-desktop">
@@ -48,7 +48,7 @@ const FooterPage = () => {
             <a href="https://facebook.com/akromanyame" target="_blank" rel="noopener noreferrer"> <p style={{color:"white"}}>Facebook</p></a>
             <p>TikTok <a href="https://twitter.com/akromanyame" target="_blank" rel="noopener noreferrer"></a></p>
             <p>Instagram <a href="https://instagram.com/akromanyame" target="_blank" rel="noopener noreferrer"></a></p>
-            <span className="footer-account" onClick={() => navigate('/login')}> Account</span>
+            <span className="footer-account" onClick={() => window.location.href='/login'}> Account</span>
             </div>
             <div className="footer-subscribe">
             <h2 className="sub-news">Subscribe to Our Newsletter</h2>
@@ -72,11 +72,11 @@ const FooterPage = () => {
             <div className="footer-content-column">
                  <div className="footer-links">
             <h2 className="sub-news">Access Forms</h2>
-            <Link to="/form-1" className="apply-links">Apply to Study Abroad</Link>
-            <Link to="/work-form" className="apply-links">Apply to Work Abroad</Link>
-            <Link to="/document-form" className="apply-links">Apply for Documents</Link>
-            <Link to="/hotel-form" className="apply-links">Apply for Hotel Booking</Link>
-             <Link to="/flight-form" className="apply-links">Apply for Flight Ticket</Link>
+            <button onClick={() => window.location.href='/form-1'} className="apply-links">Apply to Study Abroad</button>
+            <button onClick={() => window.location.href='/work-form'} className="apply-links">Apply to Work Abroad</button>
+            <button onClick={() => window.location.href='/document-form'} className="apply-links">Apply for Documents</button>
+            <button onClick={() => window.location.href='/hotel-form'} className="apply-links">Apply for Hotel Booking</button>
+             <button onClick={() => window.location.href='/flight-form'} className="apply-links">Apply for Flight Ticket</button>
                 </div>
                 <Reviews/>
                  <div className="footer-logo">
@@ -115,7 +115,7 @@ const FooterPage = () => {
                   <p>Facebook <a href="https://facebook.com/akromanyame" target="_blank" rel="noopener noreferrer"></a></p>
                   <p>TikTok <a href="https://twitter.com/akromanyame" target="_blank" rel="noopener noreferrer"></a></p>
                   <p>Instagram <a href="https://instagram.com/akromanyame" target="_blank" rel="noopener noreferrer"></a></p>
-                  <span className="footer-account" onClick={() =>navigate('/login')}> Account</span>
+                  <span className="footer-account" onClick={() =>window.location.href='/login'}> Account</span>
                   </div>
 
               </div>

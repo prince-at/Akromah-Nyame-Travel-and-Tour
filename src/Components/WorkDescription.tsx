@@ -1,11 +1,11 @@
 import "././Pages/Css/WorkDescription.css"
 import desc from "../assets/School-Africa-USA-Visa-Application-Guides.jpg"
-import { useNavigate } from "react-router-dom"
+
 import { motion } from "framer-motion";
 
 
 const WorkDescription = () => {
-    const navigate =useNavigate();
+   
     
   return (
     <motion.div className="work-description-full-page"> 
@@ -50,8 +50,8 @@ const WorkDescription = () => {
                             <li>Safety Officer / Health & Safety Manager </li>
                         </ul>
                          <div className="applies-container">
-                    <button className="apply-for-work" onClick={()=>navigate("/work-form")}>Apply Now</button>
-                    <button className="apply-for-work" onClick={() => navigate('/contact')}>Contact</button>
+                    <button className="apply-for-work" onClick={()=>window.location.href="/work-form"}>Apply Now</button>
+                    <button className="apply-for-work" onClick={() => window.location.href='/contact'}>Contact</button>
                 </div>
                 </div>
                 <div className="line">
@@ -83,8 +83,8 @@ const WorkDescription = () => {
                         <li>Window/Door Installer</li>
                     </ul>
                      <div className="applies-container2">
-                    <button className="apply-for-work" onClick={()=>navigate("/work-form")}>Apply Now</button>
-                    <button className="apply-for-work" onClick={() => navigate('/contact')}>Contact</button>
+                    <button className="apply-for-work" onClick={()=>window.location.href="/work-form"}>Apply Now</button>
+                    <button className="apply-for-work" onClick={() => window.location.href='/contact'}>Contact</button>
                 </div>
                 </div>
                 <div className="line">
@@ -114,8 +114,8 @@ const WorkDescription = () => {
                         
                     </ul>
                     <div className="applies-container3">
-                    <button className="apply-for-work" onClick={()=>navigate("/work-form")}>Apply Now</button>
-                    <button className="apply-for-work" onClick={() => navigate('/contact')}>Contact</button>
+                    <button className="apply-for-work" onClick={()=>window.location.href="/work-form"}>Apply Now</button>
+                    <button className="apply-for-work" onClick={() => window.location.href='/contact'}>Contact</button>
                 </div>
                 </div>
                 

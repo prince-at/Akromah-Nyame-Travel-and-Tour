@@ -301,7 +301,7 @@
 }
     .country-item {
         margin-top: 20px;
-        margin-left: 0;
+        /* margin-left: 0; */
         width: 45%;
        
     }
@@ -517,7 +517,7 @@
         flex-direction: column;
     }
     .country-item{
-        width: 85% !important;
+        width: 90% !important;
         height: 100px;
     }
 

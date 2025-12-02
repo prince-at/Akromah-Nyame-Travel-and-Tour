@@ -7,11 +7,11 @@ import 'swiper/swiper.css';
 import 'swiper/swiper-bundle.css';
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useNavigate } from "react-router-dom";
+
 
 
 const Banner = () => {
-  const navigate =useNavigate(); 
+  
   return (
     <div>
  
@@ -39,8 +39,8 @@ const Banner = () => {
         <div className="uae-test">
         <h1 className="visa-guaranteed" >
           VISA ASSISTANCE & ADMISSIONS GUARANTEED </h1>
-          <button className='banner-button' onClick={()=>window.location.href='/contact'}>
-            
+          <button className='banner-button' onClick={()=>window.location.href="/contact"}>
+           
             Get in Touch </button>
        </div>
         </SwiperSlide>
@@ -54,7 +54,7 @@ const Banner = () => {
         <h1 className="visa-guaranteed" >
           VISA ASSISTANCE & ADMISSIONS GUARANTEED </h1>
             
-          <button className='banner-button' onClick={()=>navigate("/contact")}>Get in Touch </button>
+          <button className='banner-button' onClick={()=>window.location.href="/contact"}>Get in Touch </button>
           
        </div>
         </SwiperSlide>
@@ -67,7 +67,7 @@ const Banner = () => {
         <div className="uae-test">
         <h1 className="visa-guaranteed">
           VISA ASSISTANCE & ADMISSIONS GUARANTEED </h1>
-          <button className='banner-button' onClick={()=>navigate("/contact")}>Get in Touch </button>
+          <button className='banner-button' onClick={()=>window.location.href="/contact"}>Get in Touch </button>
        </div>
         </SwiperSlide>
         

@@ -1,8 +1,8 @@
-import { useNavigate } from 'react-router-dom'
+
 import travel from '../assets/After-School-Africa-USA-Visa-Application-Guide.jpg'
 import './scene/SecondServiceSection.css'
 function ThirdSlideImage() {
-    const navigate = useNavigate();
+  
   return (
     
          <div>
@@ -10,7 +10,7 @@ function ThirdSlideImage() {
         <img src={travel} alt='slider-image' className="slider-image"/>
         <h1 className="slider-title">TRAVELLING DOCUMENTS ASSISTANT.</h1>
         <p className="slider-text">Work VISA, Visit VISA, STUDENT VISA, Passport, Residency Permit ID, Flight ticket,</p>
-        <button className="slider-button" onClick={() => navigate ('/document-form')}>Apply Now</button>
+        <button className="slider-button" onClick={() => window.location.href= '/document-form'}>Apply Now</button>
         </div>
     </div>
     

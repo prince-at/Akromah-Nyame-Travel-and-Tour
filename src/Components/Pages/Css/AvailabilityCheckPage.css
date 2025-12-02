@@ -6,6 +6,9 @@
     position: relative;
     
 }
+body{
+  overflow-x: hidden;
+}
 .availability-check-main-container{
     width: 100%;
     height: 100%;
@@ -69,8 +72,9 @@
     padding-left: 100px;
     padding-top: 70px;
     padding-bottom: 70px;
-    align-items: center;
-    justify-content: center;
+    
+    
+ 
 
 }
 .availability-check-item{
@@ -78,6 +82,8 @@
 }
 .availability-check-item-1 {
     padding-bottom: 15px;
+    font-size: 2rem;
+    font-weight: bold;
     position: relative; /* Needed for absolute positioning of ::after */
 }
 .availability-check-item-1:hover{
@@ -166,17 +172,7 @@
   align-items: center;
   justify-content: center;
 }
-
-/* scale images responsively */
-.availability-check-image{
-  width: 220px;
-  height: 220px;
-  max-width: 40%;
-  max-height: 40vh;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
+ 
 /* details spacing that collapses nicely on small screens */
 .availability-check-details{
   padding-left: 40px;
@@ -305,6 +301,7 @@
   .availability-check-image{
     max-height: 220px;
     border-radius: 6px;
+    /* max-height: 0px !important */
   }
   .availability-check-details{
     padding-left: 12px;
@@ -329,7 +326,7 @@
     align-items: center;
  }
 .availability-check-header h1 {
-   top: 70%;
+   
     left: 60%;
    
 }
@@ -357,6 +354,11 @@
 .country-item{
     width: 250px;
     margin-left: 10px;
+}
+.availability-check-item-1{
+  font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
 }
 }
 
@@ -446,8 +448,8 @@
 .availability-check-image{
   width: 220px;
   height: 220px;
-  max-width: 40%;
-  max-height: 40vh;
+
+ 
   border-radius: 8px;
   object-fit: cover;
 }

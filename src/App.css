@@ -834,7 +834,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex; /* Enable flexbox */
-  background-color: rgba(58, 3, 21, 0.425);
+  background-color: rgb(53, 87, 161);
   backdrop-filter: blur(10px);
   border-radius: 40px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15); /* Added shadow */
@@ -913,7 +913,7 @@
 }
 .about-us-image {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   object-fit: cover;
   opacity: 0.4;}
 .image-container {

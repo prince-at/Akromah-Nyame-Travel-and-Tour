@@ -76,7 +76,7 @@ export default function ContactForm() {
             <h1 className='contact-lines'>Email</h1>
             <div className='contact-title-background'>
               <img src={gmail} alt='whatsapp-icon' className='whatsapp-icon'/>
-          <a href='mailto:ant.consult@gmail.com' className='tel'>ant.consult@gmail.com</a>
+          <a href='mailto:ant.consult@gmail.com' className='tel'>ant.consult001@gmail.com</a>
           </div>
         
         </div>

@@ -40,7 +40,7 @@ export default function BookingForm() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-8 h-full bg-white  shadow-lg mt-12 border-2 border-gray-100">
+    <div className="max-w-2xl mx-auto p-8 h-full bg-white  mt-12 border-2 border-gray-100">
       <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Book Your Appointment</h2>
 
       {submitted ? (

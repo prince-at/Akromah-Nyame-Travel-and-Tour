@@ -13,3 +13,11 @@
     color: black;
     font-family: 'Times New Roman', Times, serif;
 }
+
+@media screen and (max-width:480px){
+    .place-center{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}

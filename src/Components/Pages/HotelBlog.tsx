@@ -3,11 +3,11 @@ import { BlogList } from "../BlogData";
 import MarqueeText2 from "../MarqueeText2";
 import "./Css/WorkAbroad.css";
 import luxuryHotel from "../../assets/luxury_disabled_holiday_accessible_accommodation_all_inclusive_luxurious-4.jpg";
-import { useNavigate } from "react-router-dom";
+
 import { motion } from "framer-motion";
 
 const HotelBlog = () => {
-  const navigate =useNavigate();
+ 
   return (
     <motion.div
     key={location.pathname}
@@ -135,7 +135,7 @@ const HotelBlog = () => {
 
           <button
             className="wbtn-get"
-            onClick={() => navigate("/contact")}
+            onClick={() => window.location.href="/contact"}
           >
             Get in Touch with Us{" "}
           </button>

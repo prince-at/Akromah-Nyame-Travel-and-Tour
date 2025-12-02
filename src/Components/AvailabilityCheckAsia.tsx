@@ -3,12 +3,12 @@ import './Pages/Css/AvailabilityCheckPage.css'
 
 import asiaWorkers from '../images/banner-engineer-team-high-five-260nw-2570693013.jpg'
 import MoreJobs from "./MoreJobs"
-import { useNavigate } from "react-router-dom"
+
 import { motion } from "framer-motion"
  
  
 const AvailabilityCheckAsia = () => {
- const navigate =useNavigate();
+ 
   return (
     <motion.div
      key={location.pathname}
@@ -28,11 +28,11 @@ const AvailabilityCheckAsia = () => {
                         <div className="availability-check-list" key={index}>
                             <img src={item.image} alt="Job" className="availability-check-image" />
                             <div className="availability-check-details">
-                            <button className="availability-check-item-1" onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>{item.title}</button>
+                            <button className="availability-check-item-1" onClick={() => window.location.href='/contact'} style={{ cursor: 'pointer' }}>{item.title}</button>
                             <li className="availability-check-item">{item.location}</li>
                             <li className="availability-check-item">{item.availability}</li>
-                            <button className="availability-check-item" onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>{item.contact}</button>
-                            <button className="availbility-contact" onClick={()=>navigate('/contact')}>{item.button} </button>
+                            <button className="availability-check-item" onClick={() =>  window.location.href='/contact'} style={{ cursor: 'pointer' }}>{item.contact}</button>
+                            <button className="availbility-contact" onClick={()=> window.location.href='/contact'}>{item.button} </button>
                             </div>
                         </div>
                     )

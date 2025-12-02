@@ -3,19 +3,7 @@ import "./Pages/Css/ApplyForm.css";
 import online from "../assets/online-booking-traveling-plane-flight-concept.jpg";
 
 import emailjs from 'emailjs-com';
-
-import {
-  FaBook,
-  FaBriefcase,
-  FaCalendarAlt,
-  FaEnvelope,
-  FaFlag,
-  FaGlobe,
-  FaGraduationCap,
-  FaHome,
-  FaPhone,
-  FaUser,
-} from "react-icons/fa";
+ 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { motion } from "framer-motion";
@@ -134,9 +122,11 @@ const ApplyForm = () => {
     exit={{ opacity: 0, x: -100 }}
     transition={{ duration: 0.3 }}
     >
+      <div className="online-booking-study-container">
       <img src={online} alt="online-bookings" className="online-bookings" />
 
       <h2 className="education">APPLY TO STUDY ABROAD.</h2>
+      </div>
       <div className="form-wrapper">
         {showForm && (
           <div>
@@ -151,9 +141,9 @@ const ApplyForm = () => {
             >
               <form onSubmit={handleSubmit}>
                 {/* Full Name */}
-                <h1 className="label-text">Full Name </h1>
-                <div className="input-group">
-                  <FaUser className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="name">Full Name </label>
+                <div >
+               
                   <input
                     type="text"
                     name="fullName"
@@ -161,21 +151,20 @@ const ApplyForm = () => {
                     value={formData.fullName}
                     onChange={handleInputChange}
                     required
-                    style={{ height: "40px", borderRadius: "5px" }}
-                    className="text-input-field"
+                    
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
-                <h1 className="label-text">Gender </h1>
-                <div className="input-group">
-                  <FaUser className="input-icon" />
+                
+                <div >
+                 <label className="block text-gray-700 mb-2" htmlFor="gender">Gender </label>
                   <select
                     name="gender"
                     value={formData.gender}
                     onChange={handleInputChange}
                     required
-                    style={{ height: "40px", borderRadius: "5px" }}
-                    className="text-input-field"
+                    className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   >
                     <option value="">Select Gender</option>
                     <option value="Male">Male</option>
@@ -184,11 +173,11 @@ const ApplyForm = () => {
                 </div>
 
                 {/* Date of Birth */}
-                <h1 className="label-text">Date of Birth </h1>
-                <div className="input-group">
-                  <FaCalendarAlt className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="date">Date of Birth </label>
+                <div >
+                  
                   <input
-                    style={{ height: "40px", borderRadius: "5px" }}
+                   
                     type="text"
                     name="dateOfBirth"
                     placeholder="Date of Birth"
@@ -197,14 +186,14 @@ const ApplyForm = () => {
                     required
                     onFocus={(e) => (e.target.type = "date")}
                     
-                    className="text-input-field"
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
                 {/* Email */}
-                <h1 className="label-text">Email </h1>
-                <div className="input-group">
-                  <FaEnvelope className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="email">Email </label>
+                <div>
+                  
                   <input
                     type="email"
                     name="email"
@@ -212,14 +201,13 @@ const ApplyForm = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    style={{ height: "40px", borderRadius: "5px" }}
-                    className="text-input-field"
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
-                <h1 className="label-text">Nationality </h1>
-                <div className="input-group phone-input-wrapper">
-                  <FaFlag className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="nationality">Nationality </label>
+                <div >
+                  
                   <input
                     type="text"
                     name="nationality"
@@ -227,14 +215,13 @@ const ApplyForm = () => {
                     value={formData.nationality}
                     onChange={handleInputChange}
                     required
-                    style={{ height: "40px", borderRadius: "5px" }}
-                    className="text-input-field"
+                    className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
-                <h1 className="label-text">Contact</h1>
-                <div className="input-group phone-input-wrapper">
-                  <FaPhone className="input-icon" />
+                <label className="block text-gray-700 mb-2 mt-2" htmlFor="number">Contact</label>
+                <div >
+           
                   <PhoneInput
                     country={"us"}
                     value={formData.phone}
@@ -252,10 +239,10 @@ const ApplyForm = () => {
                 </div>
 
                 {/* Emergency Number */}
-                <h1 className="label-text">Emergency Contact Number</h1>
-                <div style={{ height: "0.5px" }}></div>
-                <div className="input-group phone-input-wrapper">
-                  <FaPhone className="input-icon" />
+                <label className="block text-gray-700 mb-3 mt-3" htmlFor="name">Emergency Number</label>
+                
+                <div >
+                 
                   <PhoneInput
                     country={"us"}
                     value={formData.emergencyContact}
@@ -273,9 +260,9 @@ const ApplyForm = () => {
                 </div>
 
                 {/* Address */}
-                <h1 className="label-text">Current Address </h1>
-                <div className="input-group">
-                  <FaHome className="input-icon" />
+                <label className="block text-gray-700 mb-2 mt-3" htmlFor="address">Current Address </label>
+                <div >
+               
                   <input
                     type="text"
                     name="address"
@@ -283,22 +270,20 @@ const ApplyForm = () => {
                     value={formData.address}
                     onChange={handleInputChange}
                     required
-                    style={{ height: "40px", borderRadius: "5px" }}
-                    className="text-input-field"
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
                 {/* Country */}
-                <h1 className="label-text">Country You Want to Study In </h1>
-                <div className="input-group">
-                  <FaGlobe className="input-icon" />
+                <label className="block text-gray-700 mb-2 mt-2" htmlFor="country">Country You Want to Study In </label>
+                <div>
+                 
                   <select
                     name="country"
                     value={formData.country}
                     onChange={handleInputChange}
                     required
-                    className="text-input-field"
-                    style={{ height: "40px", borderRadius: "5px" }}
+                    className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   >
                     <option value="">Select Country</option>
                     <option value="USA">USA</option>
@@ -311,18 +296,17 @@ const ApplyForm = () => {
                 </div>
 
                 {/* Work */}
-                <h1 className="label-text">What Qualification are you seeking?</h1>
-                <div className="input-group">
-                  <FaBriefcase className="input-icon" />
+                <label className="block text-gray-700 mb-2 mt-2" htmlFor="name">Qualification seeking?</label>
+                <div >
+                
                   <select
                     name="qualification"
                     value={formData.qualification}
                     onChange={handleInputChange}
                     required
-                    className="text-input-field"
-                    style={{ height: "40px", borderRadius: "5px" }}
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   >
-                    <option value="">Qualification Seeking</option>
+                    <option value="Choose" >Choose</option>
                     <option value="High-school">High School</option>
                     <option value="Bachelor's-degree">Bachelor's Degree</option>
                     <option value="Master's-degree">Master's Degree</option>
@@ -332,16 +316,15 @@ const ApplyForm = () => {
                 </div>
 
                 {/* Scholarship */}
-                <h1 className="label-text">Scholarship Type</h1>
-                <div className="input-group">
-                  <FaGraduationCap className="input-icon" />
+                <label className="block text-gray-700 mb-2 mt-2" htmlFor="name">Scholarship Type</label>
+                <div>
+                  
                   <select
                     name="scholarship"
                     value={formData.scholarship}
                     onChange={handleInputChange}
                     required
-                    className="text-input-field"
-                    style={{ height: "40px", borderRadius: "5px" }}
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   >
                     <option value="">Choose Scholarship type</option>
                     <option value="Fully Funded">Fully Funded</option>
@@ -351,9 +334,9 @@ const ApplyForm = () => {
                 </div>
 
                 {/* Program to Study */}
-                <h1 className="label-text">Program to Study </h1>
-                <div className="input-group">
-                  <FaBook className="input-icon" />
+                <label className="block text-gray-700 mb-2 mt-2" htmlFor="program">Program to Study </label>
+                <div >
+                  
                   <input
                     type="text"
                     name="program"
@@ -361,12 +344,11 @@ const ApplyForm = () => {
                     value={formData.program}
                     onChange={handleInputChange}
                     required
-                    className="text-input-field"
-                    style={{ height: "40px", borderRadius: "5px" }}
+                     className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
-                <button type="submit" disabled={submitting}>
+                <button type="submit" disabled={submitting} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 mt-4 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-blue-400">
                   {submitting ? "Submitting..." : "Submit"}
                 </button>
               </form>

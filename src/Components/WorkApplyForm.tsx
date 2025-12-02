@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./Pages/Css/ApplyForm.css";
 import online from "../assets/online-booking-traveling-plane-flight-concept.jpg"
-import { FaBriefcase, FaCalendarAlt, FaEnvelope, FaFlag, FaGlobe, FaHome, FaPhone, FaUser } from "react-icons/fa";
+
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import {  useNavigate } from "react-router-dom";
-import { FaGenderless } from "react-icons/fa6";
+
 import axios from "axios";
 import emailjs from 'emailjs-com';
 import { motion } from "framer-motion";
@@ -135,15 +135,17 @@ const WorkApplyForm = () => {
     exit={{ opacity: 0, x: -100 }}
     transition={{ duration: 0.3 }}
     >
+      <div className="online-booking-container">
       <img src={online} alt="online-bookings" className="online-bookings"/>
     
       <h2 className="education">
         APPLY TO WORK ABROAD.
       </h2>
+      </div>
 
       <div className="form-wrapper">
         {showForm && (
-          <div>
+          <div >
             <div
               className="form-container"
               style={{
@@ -153,11 +155,11 @@ const WorkApplyForm = () => {
                 margin: "0 auto",
               }}
             >
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Full Name */}
-                <h1 className="label-text">Full Name </h1>
-                <div className="input-group">
-                  <FaUser className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="name">Full Name </label>
+                <div >
+                  
                   <input 
                     type="text" 
                     name="fullName"
@@ -165,41 +167,40 @@ const WorkApplyForm = () => {
                     required
                     value={formData.fullName}
                     onChange={handleChange}
-                    style={{ height: "40px", borderRadius: '5px' }} 
-                    className="text-input-field"
+                    
+                      className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
                 {/* Date of Birth */}
-                <h1 className="label-text">Date of Birth</h1>
-                <div className="input-group">
-                  <FaCalendarAlt className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="date">Date of Birth</label>
+                <div >
+                 
                   <input
                     type="text"
                     name="dateOfBirth"
-                    style={{ height: "40px", borderRadius: '5px' }}
+                  
                     placeholder="Date of Birth"
                     required
                     value={formData.dateOfBirth}
                     onChange={handleChange}
                     onFocus={(e) => (e.currentTarget.type = "date")}
                    
-                    className="text-input-field"
+                    className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
                 {/* Gender */}
-                <h1 className="label-text">Gender</h1>
-                <div className="input-group">
-                  <FaGenderless className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="gender">Gender</label>
+                <div >
+                 
                   <select 
                     name="gender" 
                     aria-label="Gender" 
                     required
                     value={formData.gender}
                     onChange={handleChange}
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field"
+                    className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   >
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
@@ -208,25 +209,24 @@ const WorkApplyForm = () => {
                 </div>
 
                 {/* Email */}
-                <h1 className="label-text">Email</h1>
-                <div className="input-group">
-                  <FaEnvelope className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="email">Email</label>
+                <div>
+                  
                   <input 
                     type="email" 
                     name="email"
-                    placeholder="Email" 
+                    placeholder="you@example.com" 
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field" 
+                    className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
                 {/* Nationality */}
-                <h1 className="label-text">Nationality</h1>
-                <div className="input-group phone-input-wrapper">
-                  <FaFlag className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="nationality">Nationality</label>
+                <div>
+                  
                   <input 
                     type="text" 
                     name="nationality"
@@ -234,15 +234,14 @@ const WorkApplyForm = () => {
                     required
                     value={formData.nationality}
                     onChange={handleChange}
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field"
+                    className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
                 {/* Contact Number */}
-                <h1 className="label-text">Contact Number</h1>
-                <div className="input-group phone-input-wrapper">
-                  <FaPhone className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="number">Contact Number</label>
+                <div   >
+         
                   <PhoneInput
                     country={"us"}
                     value={formData.contact}
@@ -260,10 +259,10 @@ const WorkApplyForm = () => {
                 </div>
 
                 {/* Emergency Contact Number */}
-                <h1 className="label-text">Emergency Contact Number</h1>
-                <div style={{ height: '0.5px' }}></div>
-                <div className="input-group phone-input-wrapper">
-                  <FaPhone className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="number">Emergency Number</label>
+                
+                <div   >
+              
                   <PhoneInput
                     country={"us"}
                     value={formData.emergencyNo}
@@ -277,13 +276,14 @@ const WorkApplyForm = () => {
                     buttonClass="country-dropdown"
                     dropdownClass="country-list"
                     onChange={handleEmergencyPhoneChange}
+                    
                   />
                 </div>
 
                 {/* Address */}
-                <h1 className="label-text">Current Address</h1>
-                <div className="input-group">
-                  <FaHome className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="address">Current Address</label>
+                <div>
+                 
                   <input 
                     type="text" 
                     name="address"
@@ -291,15 +291,14 @@ const WorkApplyForm = () => {
                     required
                     value={formData.address}
                     onChange={handleChange}
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field"
+                      className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
                 {/* Destination Country */}
-                <h1 className="label-text">Destination Country</h1>
-                <div className="input-group">
-                  <FaGlobe className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="country">Destination Country</label>
+                <div >
+                  
                   <input 
                     type="text" 
                     name="destination"
@@ -307,15 +306,14 @@ const WorkApplyForm = () => {
                     required
                     value={formData.destination}
                     onChange={handleChange}
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field"
+                      className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
                 {/* Work Type */}
-                <h1 className="label-text">Work Applying for</h1>
-                <div className="input-group">
-                  <FaBriefcase className="input-icon" />
+                <label className="block text-gray-700 mb-2" htmlFor="work">Work Applying for</label>
+                <div>
+            
                   <input 
                     type="text" 
                     name="workType"
@@ -323,12 +321,12 @@ const WorkApplyForm = () => {
                     required
                     value={formData.workType}
                     onChange={handleChange}
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field"
+                   
+                      className="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                   />
                 </div>
 
-                <button type="submit" disabled={submitting} >
+                <button type="submit" disabled={submitting} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6  shadow-lg transition focus:outline-none focus:ring-2 focus:ring-blue-400">
                   {submitting? "submitting...":"submit" }
                 </button>
               </form>

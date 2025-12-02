@@ -26,8 +26,7 @@ import DocumentForm from "./DocumentForm"
 import FlightBookings from "./FlightBookings"
 import { AnimatePresence } from "framer-motion"
 import Home from "./Home"
-import MoreJobs from "./MoreJobs"
-
+ 
 
 function AnimatedRoute() {
     const location =useLocation();
@@ -52,11 +51,11 @@ function AnimatedRoute() {
               path="/study-abroad-details"
               element={<ApplyStudyAbroad />}
             />
-            <Route
+            {/* <Route
               path="/study-abroad-details"
               element={<ApplyStudyAbroad />}
-            />
-            <Route path="/" element={<MoreJobs/>}/>
+            /> */}
+       
             <Route path="/uae" element={<Uae/>} />
             <Route path="/australia" element={<AvailableCheckPage2 />} />
             <Route path="/asia" element={<AvailabilityCheckAsia />} />

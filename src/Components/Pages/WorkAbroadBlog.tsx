@@ -4,11 +4,11 @@ import { BlogList } from "../BlogData";
 import MarqueeText2 from "../MarqueeText2";
 import "./Css/WorkAbroad.css"
 import workOutside from "../../assets/cover-rise-in-employees-working-abroad.jpg"
-import { useNavigate } from "react-router-dom";
+
 import { motion } from "framer-motion";
 
 const WorkAbroadBlog = () => { 
-const navigate =useNavigate();
+
   
   return (
     <motion.div className="cover-for-blog"
@@ -71,7 +71,7 @@ const navigate =useNavigate();
     <h1 className="global-text">Conclusion</h1>
     <h1 className="work-abroad-title">Ready to start your work abroad journey? Explore current opportunities, visa tips, and destination guides in our Work Abroad Resources section.</h1>
     <h1 className="work-abroad-title">Would you like me to tailor this blog post to a specific country, industry (e.g. healthcare, tech), or audience (e.g. students, skilled workers)?</h1>
-    <button className="wbtn-get" onClick={() => navigate('/contact')}>Get in Touch with Us </button>
+    <button className="wbtn-get" onClick={() => window.location.href='/contact'}>Get in Touch with Us </button>
     <hr/>
     
     </div>

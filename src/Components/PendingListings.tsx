@@ -1,11 +1,11 @@
 
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import "../Components/Pages/Css/PendingList.css"
 import HotelTable from './Tables/HotelTable'
 import { motion } from 'framer-motion';
 
 const PendingListings = () => {
-  const navigate =useNavigate();
+
  return ( 
     <motion.div className='pending-listings'
     key={location.pathname}
@@ -58,7 +58,7 @@ const PendingListings = () => {
             >
               Hotel
             </NavLink>
-            <div onClick ={()=> navigate('login')}
+            <div onClick ={()=> window.location.href='/login'}
               className= 'log-out'
               
             >

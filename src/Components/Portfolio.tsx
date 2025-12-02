@@ -1,9 +1,9 @@
 
-import { useNavigate } from "react-router-dom";
+
 import picture from "../images/WhatsApp Image 2025-06-29 at 3.08.04 PM.jpeg"; 
 
 const Portfolio = () => { 
-const navigate =useNavigate();  
+
   return (
     <div className="full-container-portfolio">
       <div className="portfolio-text-container">
@@ -19,7 +19,7 @@ const navigate =useNavigate();
             <span className="portfolio-text-2">Visit our Portfolio</span>
             
           </div>
-          <button className="portfolio-button" onClick={() => navigate('/blog')}>See Portfolio</button>
+          <button className="portfolio-button" onClick={() => window.location.href='/blog'}>See Portfolio</button>
         </div>
       </div> 
     </div>

@@ -12,11 +12,11 @@ import 'swiper/swiper-bundle.css';
 
 import { FaBriefcase, FaGraduationCap, FaPassport, FaPlaneDeparture } from "react-icons/fa";
 import ReviewForm from "../ReviewForm";
-import { useNavigate } from "react-router-dom";
+
 import { motion } from "framer-motion";
 
 const Services = () => {
-  const navigate =useNavigate()
+
   return (
     <motion.div className="services-page-background"
     key={location.pathname}
@@ -307,8 +307,8 @@ const Services = () => {
             transition={{ duration: 0.3 }}
             >
               <h1>Get in Touch with us</h1>
-              <button onClick={()=>navigate('/book')} className="appoint-book-hover">Book Appointment</button>
-              <button onClick={()=>navigate('/contact')} className="appoint-book-hover">Contact us</button>
+              <button onClick={()=>window.location.href='/book'} className="appoint-book-hover">Book Appointment</button>
+              <button onClick={()=>window.location.href='/contact'} className="appoint-book-hover">Contact us</button>
             </motion.div>
           </div> 
           </div>

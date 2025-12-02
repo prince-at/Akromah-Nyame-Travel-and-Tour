@@ -1,8 +1,8 @@
  import React, { useState } from "react";
  import './Pages/Css/ApplyForm.css'; // Adjust the path as necessary
  import online from "../assets/online-booking-traveling-plane-flight-concept.jpg"
-import {FaCalendarAlt, FaEnvelope, FaFlag, FaHome, FaPassport, FaPhone, FaPlane, FaPlaneArrival, FaPlaneDeparture, FaUser } from "react-icons/fa";
-import PhoneInput from "react-phone-input-2";
+
+ import PhoneInput from "react-phone-input-2";
  import emailjs from 'emailjs-com';
 import { motion } from "framer-motion";
  const FlightBookings = () => {
@@ -78,11 +78,12 @@ import { motion } from "framer-motion";
     exit={{ opacity: 0, x: -100 }}
     transition={{ duration: 0.3 }}
     >
+      <div className="online-booking-flight-container">
           <img src={online} alt="online-bookings" className="online-flight-bookings"/>
         
            <h2 className="education">
                   APPLY FOR YOUR FLIGHT TICKET.
-                </h2>
+                </h2></div>
           {/* <button onClick={() => setShowForm(true)} className="apply-now">
             Apply to Work Abroad
           </button> */}
@@ -109,63 +110,63 @@ import { motion } from "framer-motion";
                
                 <form onSubmit={handleSubmit}>
                   {/* Full Name */}
-                  <h1 className="label-text">Full Name </h1>
-                  <div className="input-group">
+                  <label className="block text-gray-700 mb-2 " htmlFor="name">Full Name </label>
+                  <div >
                     
-                    <FaUser className="input-icon" />
+                   
                     <input type="text" placeholder="Full Name" required
-                    style={{ height: "40px", borderRadius: '5px' }} 
-                    className="text-input-field" onChange={handleChange}
+                    className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
+                    onChange={handleChange}
                     value={formData.fullName}
                     name="fullName"
                     />
                   </div>
     
                   {/* Date of Birth */}
-                  <h1 className="label-text">Date of Birth </h1>
-                                <div className="input-group">
-                    <FaCalendarAlt className="input-icon" />
+                  <label className="block text-gray-700 mb-2 mt-2" htmlFor="dateOfBirth">Date of Birth </label>
+                                <div >
+                    
                     <input
-                      style={{ height: "40px", borderRadius: '5px' }}
+                      
                       type="date"
                       name="dateOfBirth"
                       placeholder="Date of Birth"
                       required
                       onFocus={(e) => (e.target.type = "date")}
                       
-                      className="text-input-field"
+                      className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                       onChange={handleChange}
                       value={formData.dateOfBirth}
                     />
                   </div>
                   {/* Email */}
-                  <h1 className="label-text">Email </h1>
-                  <div className="input-group">
-                    <FaEnvelope className="input-icon" />
+                  <label className="block text-gray-700 mb-2 mt-2 " htmlFor="email">Email </label>
+                  <div >
+                    
                     <input type="email" placeholder="Email" required
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field" onChange={handleChange} value={formData.email} 
+                    className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
+                    onChange={handleChange} value={formData.email} 
                     name="email"/>
                   </div>
-                  <h1 className="label-text">Nationality </h1>
-                  <div className="input-group phone-input-wrapper">
-                    <FaFlag className="input-icon" />
+                  <label className="block text-gray-700 mb-2 mt-2" htmlFor="nationality">Nationality </label>
+                  <div >
+                    
                     <input type="text" placeholder="Nationality" required 
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field" onChange={handleChange} value={formData.nationality}
+                    className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
+                    onChange={handleChange} value={formData.nationality}
                     name="nationality"/>
                   </div>
-                  <h1 className="label-text">Passport Number</h1>
-                  <div className="input-group phone-input-wrapper">
-                    <FaPassport className="input-icon" />
+                  <label className="block text-gray-700 mb-2 mt-2" htmlFor="passportNumber">Passport Number</label>
+                  <div >
+                  
                     <input type="text" placeholder="Passport Number" required 
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field" onChange={handleChange} value={formData.passportNumber}
+                    className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
+                    onChange={handleChange} value={formData.passportNumber}
                     name="passportNumber"/>
                   </div>
-                  <h1 className="label-text">Mobile Number</h1>
-                  <div className="input-group phone-input-wrapper">
-                <FaPhone className="input-icon" />
+                  <label className="block text-gray-700 mb-2 mt-3" htmlFor="mobileNumber">Mobile Number</label>
+                  <div >
+                
                 <PhoneInput
                   country={"us"}
                   placeholder={"Enter phone number"}
@@ -183,11 +184,11 @@ import { motion } from "framer-motion";
                   value={formData.mobileNumber}
                 />
               </div>
-                 <h1 className="label-text">Emergency Number </h1>
-                  <div style={{ height: '0.5px' }}></div>
-                   <div className="input-group phone-input-wrapper">
+                 <label className="block text-gray-700 mb-3 mt-3" htmlFor="emergencyContactNumber">Emergency Number </label>
+                  
+                   <div >
                    
-                <FaPhone className="input-icon" />
+                 
                 <PhoneInput
                   country={"us"}
                   placeholder={"Emergency Contact Number"}
@@ -205,38 +206,37 @@ import { motion } from "framer-motion";
               </div>
     
                   {/* Address */}
-                  <h1 className="label-text">Current Address</h1>
-                  <div className="input-group">
+                  <label className="block text-gray-700 mb-2 mt-2" htmlFor="address">Current Address</label>
+                  <div >
                     
-                    <FaHome className="input-icon" />
+                    
                     <input type="text" placeholder="Current Address" required 
-                    style={{ height: "40px", borderRadius: '5px' }}
-                    className="text-input-field" onChange={handleChange} value={formData.currentAddress}
+                    className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
+                     onChange={handleChange} value={formData.currentAddress}
                     name="currentAddress" />
                   </div>
 
                   
-                  <h1 className="label-text">Destination</h1>
+                  <label className="block text-gray-700 mb-2 mt-2" htmlFor="destination">Destination</label>
                   <div >
 
                    {/* <h1 className="education">Flight Ticket Booking</h1> */}
-                   <div className="input-group">
-                      <FaPlane className="input-icon" />
+                   <div >
+                     
                         <input
                           type="text"
                           name="destination"
                           placeholder="Destination"
                           value={formData.destination}
                           required
-                          style={{ height: "40px", borderRadius: '5px' }}
-                          className="text-input-field"
+                         className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                           onChange={handleChange}
                           
                         />
                     </div>  
-                    <h1 className="label-text">Departure Date</h1>
-                    <div className="input-group">
-                        <FaPlaneDeparture className="input-icon" />
+                    <label className="block text-gray-700 mb-2 mt-2" htmlFor="date">Departure Date</label>
+                    <div >
+                        
                         <input
                           type="date"
                           name="departureDate"
@@ -245,15 +245,14 @@ import { motion } from "framer-motion";
                           
                           value={formData.departureDate}
                           required
-                          style={{ height: "40px", borderRadius: '5px' }}
-                          className="text-input-field"
+                          className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                           onChange={handleChange}
                         />
                       </div>
                       
-                      <h1 className="label-text">Return Date</h1>
-                        <div className="input-group">
-                          <FaPlaneArrival className="input-icon" />
+                      <label className="block text-gray-700 mb-2 mt-2" htmlFor="date">Return Date</label>
+                        <div >
+                          
                         <input
                           type="date"
                           name="returnDate"
@@ -262,14 +261,15 @@ import { motion } from "framer-motion";
                          
                           value={formData.returnDate}
                           required
-                          style={{ height: "40px", borderRadius: '5px' }}
-                          className="text-input-field"
+                          className="w-full px-6 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
                           onChange={handleChange}
                         />
                        </div>
                     
                   </div>
-                  <button type="submit" className="submit" disabled={submitting} >
+                  <button type="submit"  disabled={submitting}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 mt-4 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  >
                     {submitting? "submitting..":"submit" }
                   </button>
                   

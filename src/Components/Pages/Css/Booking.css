@@ -266,9 +266,9 @@ textarea:focus{
     font-size: 14px;
     padding-top: 0;
   }
-  .work-hours-title{
+  /* .work-hours-title{
 
-  }
+  } */
   .appointment-booking{
     font-size: 18px;
     padding: 10px;
@@ -303,9 +303,9 @@ textarea:focus{
     font-size: 14px;
     padding-top: 0;
   }
-  .work-hours-title{
+  /* .work-hours-title{
 
-  }
+  } */
   .appointment-booking{
     font-size: 18px;
     padding: 10px;
@@ -339,9 +339,7 @@ textarea:focus{
     font-size: 14px;
     padding-top: 0;
   }
-  .work-hours-title{
-
-  }
+  
   .appointment-booking{
     font-size: 18px;
     padding: 10px;
@@ -353,7 +351,7 @@ textarea:focus{
 @media (max-width: 480px){
   .review-form{ padding: 12px; }
   .form-actions{ flex-direction:column; align-items:stretch; }
-  .review-submitting-btn{ width:100%; padding:12px; }
+  .review-submitting-btn{  padding:12px; }
   .success{ margin-left:0; margin-top:8px; text-align:center; }
    .form-actions{
     width: 100%;
@@ -397,10 +395,9 @@ textarea:focus{
   .days-of-work{
     font-size: 13px;
     padding-top: 0;
-  }
-  .work-hours-title{
+  } 
+  
 
-  }
   .appointment-booking{
     font-size: 18px;
     padding: 10px;

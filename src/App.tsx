@@ -1,7 +1,8 @@
 import {
-  HashRouter  as Router,
+  BrowserRouter  as Router,
 
   NavLink,
+  
 } from "react-router-dom";
 import "./App.css";
 import logo from '././Components/images-services/akromah-company-logo.png'; // Adjust the path to your logo image
@@ -33,14 +34,17 @@ function App() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [transitionLoading, setTransitionLoading] =useState(false);
+  const [ ,setTransitionLoading] =useState(false);
+
+
 
   useEffect(() => {
   setTransitionLoading(true);
 
   const timer = setTimeout(() => {
     setTransitionLoading(false);
-  }, 3000); // SAME as framer-motion transition duration
+  }, 3000);
+   // SAME as framer-motion transition duration
 
   return () => clearTimeout(timer);
 }, [location.pathname]);
@@ -70,12 +74,13 @@ function App() {
       loading?  (<SpinningEffect/>) :
     (
       <div>
-        {transitionLoading && (
+        {/* {transitionLoading && (
   <div className="transition-loader">
     <SpinningEffect />
   </div>
-)}
-      <Router>
+)} */}
+<Router>
+     <header>
         <nav className={`header ${scrolled ? "scrolled" : ""}`}>
           <div>
             {" "}
@@ -85,40 +90,56 @@ function App() {
           <ul className={`navList ${isOpen ? "open" : ""}`}>
               <li>
                 <NavLink to="/" className= {({isActive})=> isActive? 'text-size active':'text-size'} 
-                
+                 onClick={()=>window.location.href="/"}
                 >
+                  
                   {headText1}
+                 
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/about" className={({isActive})=> isActive? 'text-size active':'text-size'}>
+                <NavLink to="/about" className={({isActive})=> isActive? 'text-size active':'text-size'}
+                 onClick={()=>window.location.href="/about"}
+                >
+                  
                   {headText2}
                 </NavLink>
               </li>
               <div className="iconList">
                 <li>
-                  <NavLink to="/services" className={({isActive})=> isActive? 'text-size active':'text-size'}>
+                  <NavLink to="/services" className={({isActive})=> isActive? 'text-size active':'text-size'}
+                  
+                   onClick={()=>window.location.href="/services"}
+                    >
                     {headText3}
                   </NavLink>
                 </li>
               </div>
               <li>
-                <NavLink to="/contact" className={({isActive})=> isActive? 'text-size active':'text-size'}>
+                <NavLink to="/contact" className={({isActive})=> isActive? 'text-size active':'text-size'}
+                 onClick={()=>window.location.href="/contact"}
+                >
                   {headText4}
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/blog" className={({isActive})=> isActive? 'text-size active':'text-size'}>
+                <NavLink to="/blog" className={({isActive})=> isActive? 'text-size active':'text-size'}
+                 onClick={()=>window.location.href="/blog"}
+                >
                   {headText5}
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/book" className={({isActive})=> isActive? 'text-size active':'text-size'}>
+                <NavLink to="/book" className={({isActive})=> isActive? 'text-size active':'text-size'}
+                 onClick={()=>window.location.href="/book"}
+                >
                   {headText6}
                 </NavLink>
               </li>
                <li className="job-listings">
-                <NavLink to="/work-description" className={({isActive})=> isActive? 'text-size-job active':'text-size-job'}>
+                <NavLink to="/work-description" className={({isActive})=> isActive? 'text-size-job active':'text-size-job'}
+                 onClick={()=>window.location.href="/work-description"}
+                >
                   Job Listings
                 </NavLink>
               </li>
@@ -137,7 +158,7 @@ function App() {
           </div>
           {/* <div className='buttons'><BookingButton textButton="Book" /></div> */}
         </nav>
-
+          </header>
         <div>
           <AnimatedRoute/>
         </div>
@@ -146,12 +167,13 @@ function App() {
             <FooterPage />
           </div>
         </div>
+     
       </Router>
       </div>)
       }
       </div>
     </>
   );
-}
+} 
 
 export default App;
